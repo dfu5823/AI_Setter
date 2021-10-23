@@ -1,0 +1,2 @@
+class AbstractSetter():
+    pass
