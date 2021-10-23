@@ -6,7 +6,6 @@
 from ai_setter_helpers.generate_data import generate_data
 from ai_setter_helpers.visualize_climbs import visualize_climbs
 from ai_setters.sequential_setter import SequentialSetter
-import kilter_climbs_data as screenshots
 
 '''
 Step 1: Get the training data
@@ -29,10 +28,21 @@ In general it is a good idea to try many different training datasets.
 We can start with n=20, unlabeled holds, and climbing grade only, for simplicity.
 Then we can try more featured training datasets with n<20, labeled holds, all relevant features
 '''
-print(screenshots[0])
+from scipy import ndimage, misc
+import numpy as np
+import os
+import cv2
 
-climbdata1 = generate_data(climb_screenshots=screenshots,data_type=1)
-climbdata2 = generate_data(climb_screenshots=screenshots,data_type=2)
+screenshots_paths = []
+screenshots_dir_path = os.getcwd() + '/kilter_climbs_data'
+
+# iterate through the names of contents of the folder
+for image_path in os.listdir(screenshots_dir_path):
+    # create the full input path and read the file
+    screenshots_paths.append(os.path.join(screenshots_dir_path, image_path))
+
+climbdata1 = generate_data(climb_screenshots=screenshots_paths,data_type=1)
+climbdata2 = generate_data(climb_screenshots=screenshots_paths,data_type=2)
 
 '''
 Step 2: Choose and implement a (few) generative model(s), then train the model(s) on the training data
