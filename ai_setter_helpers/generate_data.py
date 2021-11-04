@@ -1,8 +1,6 @@
 import cv2
 import numpy as np
 
-
-
 from parse_text import get_climb_description
 from parse_holds import get_hold_locations
 
@@ -11,13 +9,13 @@ def generate_data(climb_screenshots,data_type=1):
     for climb_screenshot in climb_screenshots:
         climb_image = cv2.imread(climb_screenshot)
         top_image, bottom_image = split_image(climb_image)
-        climb_data['Climb Description'] = get_climb_description(top_image)
+        climb_data['Climb Description'] = get_climb_description(climb_screenshot) # We pass in the path to the screenshot file so ocr.space can process it
         climb_data['Hold Locations'] = get_hold_locations(bottom_image)
-    pass
+    return climb_data
 
 def split_image(climb_image):
     top_image = climb_image[30:300, :]
-    bottom_image = climb_image[400:, :]
+    bottom_image = climb_image[400:-100, :]
     return top_image, bottom_image
 
 if __name__ == "__main__":
@@ -33,10 +31,11 @@ if __name__ == "__main__":
         climb_image = cv2.imread(climb_screenshot)
         cv2.imshow("original", climb_image)
         cv2.waitKey()
-        print(tuple(climb_image.shape[1::-1]))
+        # print(tuple(climb_image.shape[1::-1]))
         top_image, bottom_image = split_image(climb_image)
-        print(tuple(top_image.shape[1::-1]))
-        cv2.imshow("original", top_image)
-        cv2.waitKey()
-        cv2.imshow("original", bottom_image)
-        cv2.waitKey()
+        # cv2.imshow("original", top_image)
+        # cv2.waitKey()
+        # cv2.imshow("original", bottom_image)
+        # cv2.waitKey()
+        print(get_hold_locations(bottom_image))
+        print(get_climb_description(climb_screenshot))
