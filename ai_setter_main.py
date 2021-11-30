@@ -19,7 +19,7 @@ Quick and Dirty Idea:
         example 2: dictionary of all the holds, labeled {start:[(1,2),(1,7)],finish:[...],feet:[...],hands:[...]}
     4. Add to the hold location data the other relevant information, aka features, including:
         climbing grade, board angle, star rating, number of ascents
-Better Idea which we can't do because the Kilter Board developper is busy:
+Better Idea which we can't do because the Kilter Board developper is busy August 2021 - December 2021:
     1. access the Kilter Board API and request all climbs, which will return all of the raw training data
     2. Process the training data to make version1 and version2
     3. Filter out the climbs below n repeats, say n=20. We want n as low as possible without including too much choss.
@@ -33,16 +33,27 @@ import numpy as np
 import os
 import cv2
 
-screenshots_paths = []
-screenshots_dir_path = os.getcwd() + '/kilter_climbs_data'
+regenerate_training_data = True # here you can toggle whether you want to regenerate all the training data
 
-# iterate through the names of contents of the folder
-for image_path in os.listdir(screenshots_dir_path):
-    # create the full input path and read the file
-    screenshots_paths.append(os.path.join(screenshots_dir_path, image_path))
+if regenerate_training_data:
+    screenshots_paths = []
+    screenshots_dir_path = os.getcwd() + '/kilter_climbs_data'
 
-climbdata1 = generate_data(climb_screenshots=screenshots_paths,data_type=1)
-climbdata2 = generate_data(climb_screenshots=screenshots_paths,data_type=2)
+    # iterate through the names of contents of the folder
+    for image_path in os.listdir(screenshots_dir_path):
+        # create the full input path and read the file
+        screenshots_paths.append(os.path.join(screenshots_dir_path, image_path))
+
+    climbdata1 = generate_data(climb_screenshots=screenshots_paths,data_type=1)
+    climbdata2 = generate_data(climb_screenshots=screenshots_paths,data_type=2)
+
+    # TODO: pickle the climb data and check if it needs to be regenerated
+    # only regenerate if we don't have climb data or regenerate_training_data = True
+
+    ''' 
+    Note: at a later time we may want to remove weird climbs (with toehooks or a lot of cross moves or weird matching or choss holds)
+    These climbs might confound the training so we can manually remove them before training
+    '''
 
 '''
 Step 2: Choose and implement a (few) generative model(s), then train the model(s) on the training data
