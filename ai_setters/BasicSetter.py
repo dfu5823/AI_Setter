@@ -1,4 +1,4 @@
-from .abstract_setter import AbstractSetter
+from .AbstractSetter import AbstractSetter
 class BasicSetter(AbstractSetter):
     def __init__():
         pass

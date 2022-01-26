@@ -1,4 +1,4 @@
-from .abstract_setter import AbstractSetter
+from .AbstractSetter import AbstractSetter
 class NeuralNetwork(AbstractSetter):
     def __init__():
         pass

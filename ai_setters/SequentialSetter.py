@@ -1,8 +1,19 @@
-from .abstract_setter import AbstractSetter
+from .AbstractSetter import AbstractSetter
+import math
 class SequentialSetter(AbstractSetter):
     def __init__():
         pass
+
+    def get_hold_distance(hold1,hold2):
+        # distance = sqrt( (x2-x1)^2 + (y2-y1)^2 )
+        return math.sqrt( (hold2[0]-hold1[0])**2 + (hold2[1]-hold1[1])**2 )
+
+    nn_sequencer = NearestNeighborSequencer()
+    nearest_neighbor_sequence =NearestNeighborSequencer.get_nearest_neighbor_sequence()
+
+    
     def train(input_data):
+
         pass
         # first use a simple heuristic to determine the sequence of holds in the climb
         # (MAKE SURE to visualize this sequence of holds for a few dozen examples minimum so we know its limitations)

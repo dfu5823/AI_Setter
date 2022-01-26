@@ -3,9 +3,9 @@
 # Input: Optional parameters such as: Boulder difficulty, reachiness factor, hold type(s)
 # Output: Brand new, auto-generated kilterboard climbs matching to the input parameters
 
-from ai_setter_helpers.generate_data import generate_data
-from ai_setter_helpers.visualize_climbs import visualize_climbs
-from ai_setters.sequential_setter import SequentialSetter
+from data_parsing.generate_data import generate_data
+from data_parsing.visualize_climbs import visualize_climbs
+from ai_setters.SequentialSetter import SequentialSetter
 
 '''
 Step 1: Get the training data

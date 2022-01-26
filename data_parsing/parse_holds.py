@@ -174,12 +174,12 @@ if __name__ == "__main__":
         climb_image = cv2.imread(climb_screenshot)
         bottom_image = climb_image[400:-100, :]
 
-        cv2.imshow("bottom image", bottom_image)
-        cv2.waitKey()
-        single_color_image = black_all_but_color("Teal",bottom_image)
-        cv2.imshow("single color image", single_color_image)
-        cv2.waitKey()
-        print(detect_holds("Teal",bottom_image))
+        # cv2.imshow("bottom image", bottom_image)
+        # cv2.waitKey()
+        # single_color_image = black_all_but_color("Teal",bottom_image)
+        # cv2.imshow("single color image", single_color_image)
+        # cv2.waitKey()
+        # print(detect_holds_slow("Teal",bottom_image))
 
         print(get_hold_locations(bottom_image))
         # print(get_hold_locations_slow(bottom_image))
