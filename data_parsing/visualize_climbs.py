@@ -55,9 +55,9 @@ def visualize_one(climb):
             cv2.circle(img=output_image, center=(pcx,pcy), radius=21, color=color, thickness=3)
 
     
-    output_image = add_centered_text(output_image,'AI Setter',70,relative_font_size=2)
+    output_image = add_centered_text(output_image,'AI Setter',90,relative_font_size=2)
     # angle = 50; output_image = add_centered_text(output_image,f'{angle}º'+u'\N{DEGREE SIGN}',110,color=(255,50,0)) # TODO: degree sign is broken
-    output_image = add_centered_text(output_image,'By: Dan Fu',110,color=(150,50,0)) # TODO: degree sign is broken
+    # output_image = add_centered_text(output_image,'By: Dan Fu',110,color=(150,50,0)) # TODO: degree sign is broken
     output_image = add_centered_text(output_image,f'{climb_name}',160)
     output_image = add_centered_text(output_image,f'{climb_grade}',190,relative_font_size=0.7)
 

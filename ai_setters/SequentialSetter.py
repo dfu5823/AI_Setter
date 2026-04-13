@@ -1,4 +1,5 @@
 from .AbstractSetter import AbstractSetter
+from.sequencers.NearestNeighborSequencer import NearestNeighborSequencer
 import math
 class SequentialSetter(AbstractSetter):
     def __init__():
@@ -9,7 +10,7 @@ class SequentialSetter(AbstractSetter):
         return math.sqrt( (hold2[0]-hold1[0])**2 + (hold2[1]-hold1[1])**2 )
 
     nn_sequencer = NearestNeighborSequencer()
-    nearest_neighbor_sequence =NearestNeighborSequencer.get_nearest_neighbor_sequence()
+    nearest_neighbor_sequence = nn_sequencer.get_nearest_neighbor_sequence()
 
     
     def train(input_data):

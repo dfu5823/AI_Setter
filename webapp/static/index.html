@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Setter</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <main>
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">AI Setter</p>
+          <h1>Kilter climb viewer</h1>
+        </div>
+        <div class="controls">
+          <label>
+            Climb
+            <select id="climbSelect"></select>
+          </label>
+          <label>
+            View
+            <select id="viewMode">
+              <option value="2d">2D</option>
+              <option value="3d">3D</option>
+            </select>
+          </label>
+          <button id="setModeButton" type="button">Set a Climb</button>
+          <button id="generateBetaButton" type="button">Generate beta</button>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <div class="stage">
+          <canvas id="boardCanvas" width="750" height="1334"></canvas>
+          <canvas id="animationCanvas" width="750" height="1334"></canvas>
+          <canvas id="sampleCanvas" class="hidden" width="750" height="1334"></canvas>
+        </div>
+        <aside>
+          <h2 id="climbName">Loading</h2>
+          <p id="climbMeta">Unknown grade · 50 degrees</p>
+          <p id="statusText">Loading climbs.</p>
+          <div class="holdCounts" id="holdCounts"></div>
+
+          <div id="setterPanel" class="setterPanel" hidden>
+            <h3>Set a Climb</h3>
+            <label>
+              Name
+              <input id="newName" value="New Climb">
+            </label>
+            <label>
+              Grade
+              <input id="newGrade" value="V5">
+            </label>
+            <label>
+              Angle
+              <input id="newAngle" value="50">
+            </label>
+            <div class="holdTypeButtons">
+              <button data-hold-type="Start" class="selected" type="button">Start</button>
+              <button data-hold-type="Any" type="button">Any</button>
+              <button data-hold-type="Finish" type="button">Finish</button>
+              <button data-hold-type="Feet" type="button">Feet</button>
+            </div>
+            <button id="clearButton" type="button">Clear</button>
+            <button id="saveButton" type="button">Save climb</button>
+          </div>
+        </aside>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
