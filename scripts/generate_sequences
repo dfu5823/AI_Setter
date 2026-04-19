@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+"""
+Ways to run:
+  scripts/generate_sequences
+  scripts/generate_sequences --setter-limit 10000
+  scripts/generate_sequences --csv outputs/data/all_kilter_climbs.csv
+  scripts/generate_sequences --db --limit 50000
+
+Refreshes generated climb sequence artifacts and the 100-climb heuristic sequence
+review set from cached CSV data or directly from the Kilter DB.
+"""
+
+from __future__ import annotations
+
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+PYTHON = os.environ.get("AI_SETTER_PYTHON", "/Users/danfu/miniconda3/envs/ai_setter/bin/python")
+
+
+def main() -> int:
+    return subprocess.call([PYTHON, "-m", "ai_setters.refresh_sequence_artifacts", *sys.argv[1:]], cwd=ROOT)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+"""
+Ways to run:
+  scripts/preprocess_data
+  scripts/preprocess_data --limit 5000
+  scripts/preprocess_data --train-neural --epochs 35 --batch-size 512
+  AI_SETTER_PYTHON=/Users/danfu/miniconda3/envs/ai_setter/bin/python scripts/preprocess_data --limit 10000
+
+Preprocesses data from the configured source. With the default config this extracts
+the Kilter SQLite DB, writes cached CSV/data outputs, generates heuristic sequences,
+generated climbs, metrics, and figures.
+"""
+
+from __future__ import annotations
+
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+PYTHON = os.environ.get("AI_SETTER_PYTHON", "/Users/danfu/miniconda3/envs/ai_setter/bin/python")
+
+
+def main() -> int:
+    return subprocess.call([PYTHON, "-m", "ai_setters.preprocess_and_train", *sys.argv[1:]], cwd=ROOT)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

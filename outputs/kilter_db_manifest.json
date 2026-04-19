@@ -1,0 +1,28 @@
+{
+  "records": 261385,
+  "all_csv_rows": 261385,
+  "ascended_csv_rows": 35321,
+  "report": "/Users/danfu/Research/AI_Setter/outputs/metrics/kilter_db_field_report.json",
+  "report_md": "/Users/danfu/Research/AI_Setter/outputs/metrics/kilter_db_field_report.md",
+  "violin_plot": "/Users/danfu/Research/AI_Setter/outputs/figures/kilter_grade_by_angle_violin.png",
+  "sample_overlay": "/Users/danfu/Research/AI_Setter/outputs/figures/db_sample_climbs_4up.svg",
+  "sample_overlay_png": "/Users/danfu/Research/AI_Setter/outputs/figures/db_sample_climbs_4up.png",
+  "labeled_grid": "/Users/danfu/Research/AI_Setter/kilter_climbs_output/output_template_labeled_grid.png",
+  "grade_distribution_angles": [
+    "0",
+    "5",
+    "10",
+    "15",
+    "20",
+    "25",
+    "30",
+    "35",
+    "40",
+    "45",
+    "50",
+    "55",
+    "60",
+    "65",
+    "70"
+  ]
+}

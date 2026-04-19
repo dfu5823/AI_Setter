@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+"""
+Ways to run:
+  scripts/generate_climbs
+  scripts/generate_climbs --count 100
+  scripts/generate_climbs --per-grade 3 --min-grade 3 --max-grade 8 --setter graph
+  scripts/generate_climbs --setter random --count 20 --angle 40 --hand-count 8 --foot-count 6
+
+Generates climb PNGs from the four setters by default. Use --setter to restrict to
+one setter, --count for total output count, or --per-grade for balanced grade sets.
+"""
+
+from __future__ import annotations
+
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+PYTHON = os.environ.get("AI_SETTER_PYTHON", "/Users/danfu/miniconda3/envs/ai_setter/bin/python")
+
+
+def main() -> int:
+    return subprocess.call([PYTHON, "-m", "ai_setters.generate_climbs_cli", *sys.argv[1:]], cwd=ROOT)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

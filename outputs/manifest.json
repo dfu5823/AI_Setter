@@ -1,0 +1,471 @@
+{
+  "count": 32,
+  "generated_dir": "/Users/danfu/Research/AI_Setter/outputs/generated_climbs",
+  "figures_dir": "/Users/danfu/Research/AI_Setter/outputs/figures",
+  "metrics_dir": "/Users/danfu/Research/AI_Setter/outputs/metrics",
+  "model_status": {
+    "status": "not_requested"
+  },
+  "generated_sequence_summary": {
+    "overall_average": {
+      "moves": 9.46875,
+      "crosses": 0.8125,
+      "dynos": 0.28125,
+      "bumps": 1.6875,
+      "average_move_distance": 6.129920119513052,
+      "average_interhand_distance": 6.335960876571693,
+      "max_interhand_distance": 13.593846904564408,
+      "foot_moves": 3.0
+    },
+    "per_climb": [
+      {
+        "name": "Random Setter",
+        "setter": "random",
+        "metrics": {
+          "moves": 10,
+          "crosses": 1,
+          "dynos": 0,
+          "bumps": 2,
+          "average_move_distance": 5.302765004541532,
+          "average_interhand_distance": 5.379107862599482,
+          "max_interhand_distance": 10.198039027185569,
+          "foot_moves": 4
+        }
+      },
+      {
+        "name": "Sequential Setter",
+        "setter": "sequential",
+        "metrics": {
+          "moves": 9,
+          "crosses": 0,
+          "dynos": 1,
+          "bumps": 3,
+          "average_move_distance": 6.3825316940456664,
+          "average_interhand_distance": 8.431258514786274,
+          "max_interhand_distance": 19.79898987322333,
+          "foot_moves": 2
+        }
+      },
+      {
+        "name": "Graph Setter",
+        "setter": "graph",
+        "metrics": {
+          "moves": 11,
+          "crosses": 1,
+          "dynos": 0,
+          "bumps": 2,
+          "average_move_distance": 4.853373343392892,
+          "average_interhand_distance": 4.972994262609673,
+          "max_interhand_distance": 10.770329614269007,
+          "foot_moves": 2
+        }
+      },
+      {
+        "name": "Neural Setter",
+        "setter": "neural",
+        "metrics": {
+          "moves": 11,
+          "crosses": 2,
+          "dynos": 0,
+          "bumps": 2,
+          "average_move_distance": 4.696472700003946,
+          "average_interhand_distance": 4.8338398570520145,
+          "max_interhand_distance": 12.649110640673518,
+          "foot_moves": 4
+        }
+      },
+      {
+        "name": "Random Setter",
+        "setter": "random",
+        "metrics": {
+          "moves": 9,
+          "crosses": 0,
+          "dynos": 0,
+          "bumps": 1,
+          "average_move_distance": 6.526094317882336,
+          "average_interhand_distance": 7.4133913597544385,
+          "max_interhand_distance": 11.40175425099138,
+          "foot_moves": 4
+        }
+      },
+      {
+        "name": "Sequential Setter",
+        "setter": "sequential",
+        "metrics": {
+          "moves": 9,
+          "crosses": 1,
+          "dynos": 1,
+          "bumps": 1,
+          "average_move_distance": 7.09938905059804,
+          "average_interhand_distance": 7.4243131590693805,
+          "max_interhand_distance": 17.08800749063506,
+          "foot_moves": 2
+        }
+      },
+      {
+        "name": "Graph Setter",
+        "setter": "graph",
+        "metrics": {
+          "moves": 11,
+          "crosses": 0,
+          "dynos": 0,
+          "bumps": 3,
+          "average_move_distance": 4.78141241966266,
+          "average_interhand_distance": 5.498412777247079,
+          "max_interhand_distance": 12.806248474865697,
+          "foot_moves": 5
+        }
+      },
+      {
+        "name": "Neural Setter",
+        "setter": "neural",
+        "metrics": {
+          "moves": 10,
+          "crosses": 1,
+          "dynos": 0,
+          "bumps": 1,
+          "average_move_distance": 4.325075719980922,
+          "average_interhand_distance": 4.85875852695189,
+          "max_interhand_distance": 11.661903789690601,
+          "foot_moves": 4
+        }
+      },
+      {
+        "name": "Random Setter",
+        "setter": "random",
+        "metrics": {
+          "moves": 9,
+          "crosses": 0,
+          "dynos": 0,
+          "bumps": 1,
+          "average_move_distance": 7.6046650004148235,
+          "average_interhand_distance": 8.020937066184516,
+          "max_interhand_distance": 12.083045973594572,
+          "foot_moves": 4
+        }
+      },
+      {
+        "name": "Sequential Setter",
+        "setter": "sequential",
+        "metrics": {
+          "moves": 10,
+          "crosses": 3,
+          "dynos": 1,
+          "bumps": 7,
+          "average_move_distance": 6.328982266397899,
+          "average_interhand_distance": 6.266567912825545,
+          "max_interhand_distance": 18.973665961010276,
+          "foot_moves": 2
+        }
+      },
+      {
+        "name": "Graph Setter",
+        "setter": "graph",
+        "metrics": {
+          "moves": 9,
+          "crosses": 1,
+          "dynos": 0,
+          "bumps": 0,
+          "average_move_distance": 4.683346781024936,
+          "average_interhand_distance": 4.162974916466609,
+          "max_interhand_distance": 12.165525060596439,
+          "foot_moves": 4
+        }
+      },
+      {
+        "name": "Neural Setter",
+        "setter": "neural",
+        "metrics": {
+          "moves": 10,
+          "crosses": 0,
+          "dynos": 0,
+          "bumps": 1,
+          "average_move_distance": 5.9755999381169405,
+          "average_interhand_distance": 5.989624422830544,
+          "max_interhand_distance": 12.0,
+          "foot_moves": 2
+        }
+      },
+      {
+        "name": "Random Setter",
+        "setter": "random",
+        "metrics": {
+          "moves": 9,
+          "crosses": 0,
+          "dynos": 0,
+          "bumps": 1,
+          "average_move_distance": 9.572372016371045,
+          "average_interhand_distance": 10.646621984470906,
+          "max_interhand_distance": 18.0,
+          "foot_moves": 2
+        }
+      },
+      {
+        "name": "Sequential Setter",
+        "setter": "sequential",
+        "metrics": {
+          "moves": 9,
+          "crosses": 1,
+          "dynos": 0,
+          "bumps": 1,
+          "average_move_distance": 7.937411338432316,
+          "average_interhand_distance": 8.385596169789864,
+          "max_interhand_distance": 16.0,
+          "foot_moves": 3
+        }
+      },
+      {
+        "name": "Graph Setter",
+        "setter": "graph",
+        "metrics": {
+          "moves": 11,
+          "crosses": 1,
+          "dynos": 0,
+          "bumps": 1,
+          "average_move_distance": 5.6888807589687875,
+          "average_interhand_distance": 5.539784770949771,
+          "max_interhand_distance": 10.0,
+          "foot_moves": 1
+        }
+      },
+      {
+        "name": "Neural Setter",
+        "setter": "neural",
+        "metrics": {
+          "moves": 9,
+          "crosses": 1,
+          "dynos": 2,
+          "bumps": 0,
+          "average_move_distance": 6.429575118499803,
+          "average_interhand_distance": 5.715177883110936,
+          "max_interhand_distance": 15.231546211727817,
+          "foot_moves": 4
+        }
+      },
+      {
+        "name": "Random Setter",
+        "setter": "random",
+        "metrics": {
+          "moves": 10,
+          "crosses": 0,
+          "dynos": 0,
+          "bumps": 2,
+          "average_move_distance": 6.496066954505185,
+          "average_interhand_distance": 7.307052775673282,
+          "max_interhand_distance": 12.165525060596439,
+          "foot_moves": 4
+        }
+      },
+      {
+        "name": "Sequential Setter",
+        "setter": "sequential",
+        "metrics": {
+          "moves": 9,
+          "crosses": 0,
+          "dynos": 0,
+          "bumps": 0,
+          "average_move_distance": 6.57958996913934,
+          "average_interhand_distance": 7.126553527626249,
+          "max_interhand_distance": 10.770329614269007,
+          "foot_moves": 4
+        }
+      },
+      {
+        "name": "Graph Setter",
+        "setter": "graph",
+        "metrics": {
+          "moves": 10,
+          "crosses": 0,
+          "dynos": 0,
+          "bumps": 1,
+          "average_move_distance": 4.60312606339315,
+          "average_interhand_distance": 4.803045983758098,
+          "max_interhand_distance": 10.0,
+          "foot_moves": 2
+        }
+      },
+      {
+        "name": "Neural Setter",
+        "setter": "neural",
+        "metrics": {
+          "moves": 9,
+          "crosses": 0,
+          "dynos": 0,
+          "bumps": 1,
+          "average_move_distance": 4.778727913599405,
+          "average_interhand_distance": 4.329083965560861,
+          "max_interhand_distance": 12.806248474865697,
+          "foot_moves": 3
+        }
+      },
+      {
+        "name": "Random Setter",
+        "setter": "random",
+        "metrics": {
+          "moves": 9,
+          "crosses": 0,
+          "dynos": 0,
+          "bumps": 1,
+          "average_move_distance": 7.7979358436276,
+          "average_interhand_distance": 8.909478140767538,
+          "max_interhand_distance": 11.661903789690601,
+          "foot_moves": 4
+        }
+      },
+      {
+        "name": "Sequential Setter",
+        "setter": "sequential",
+        "metrics": {
+          "moves": 8,
+          "crosses": 1,
+          "dynos": 1,
+          "bumps": 1,
+          "average_move_distance": 7.717784038613396,
+          "average_interhand_distance": 6.767456474934532,
+          "max_interhand_distance": 12.165525060596439,
+          "foot_moves": 2
+        }
+      },
+      {
+        "name": "Graph Setter",
+        "setter": "graph",
+        "metrics": {
+          "moves": 11,
+          "crosses": 1,
+          "dynos": 0,
+          "bumps": 2,
+          "average_move_distance": 3.6161045909711627,
+          "average_interhand_distance": 4.374190347133948,
+          "max_interhand_distance": 10.770329614269007,
+          "foot_moves": 2
+        }
+      },
+      {
+        "name": "Neural Setter",
+        "setter": "neural",
+        "metrics": {
+          "moves": 10,
+          "crosses": 2,
+          "dynos": 0,
+          "bumps": 1,
+          "average_move_distance": 6.020847192475898,
+          "average_interhand_distance": 6.29579543465521,
+          "max_interhand_distance": 15.620499351813308,
+          "foot_moves": 6
+        }
+      },
+      {
+        "name": "Random Setter",
+        "setter": "random",
+        "metrics": {
+          "moves": 9,
+          "crosses": 3,
+          "dynos": 1,
+          "bumps": 6,
+          "average_move_distance": 7.519330453524217,
+          "average_interhand_distance": 7.453652025333432,
+          "max_interhand_distance": 18.384776310850235,
+          "foot_moves": 4
+        }
+      },
+      {
+        "name": "Sequential Setter",
+        "setter": "sequential",
+        "metrics": {
+          "moves": 8,
+          "crosses": 3,
+          "dynos": 0,
+          "bumps": 5,
+          "average_move_distance": 10.74752219229408,
+          "average_interhand_distance": 8.83407726530352,
+          "max_interhand_distance": 16.97056274847714,
+          "foot_moves": 6
+        }
+      },
+      {
+        "name": "Graph Setter",
+        "setter": "graph",
+        "metrics": {
+          "moves": 9,
+          "crosses": 0,
+          "dynos": 0,
+          "bumps": 2,
+          "average_move_distance": 4.276637392541884,
+          "average_interhand_distance": 4.415662576148389,
+          "max_interhand_distance": 10.0,
+          "foot_moves": 1
+        }
+      },
+      {
+        "name": "Neural Setter",
+        "setter": "neural",
+        "metrics": {
+          "moves": 8,
+          "crosses": 1,
+          "dynos": 1,
+          "bumps": 0,
+          "average_move_distance": 5.427470080162392,
+          "average_interhand_distance": 4.749036320142093,
+          "max_interhand_distance": 16.1245154965971,
+          "foot_moves": 2
+        }
+      },
+      {
+        "name": "Random Setter",
+        "setter": "random",
+        "metrics": {
+          "moves": 9,
+          "crosses": 1,
+          "dynos": 0,
+          "bumps": 1,
+          "average_move_distance": 5.12562022152175,
+          "average_interhand_distance": 5.135118258122443,
+          "max_interhand_distance": 10.295630140987,
+          "foot_moves": 3
+        }
+      },
+      {
+        "name": "Sequential Setter",
+        "setter": "sequential",
+        "metrics": {
+          "moves": 9,
+          "crosses": 1,
+          "dynos": 0,
+          "bumps": 0,
+          "average_move_distance": 6.527290700747379,
+          "average_interhand_distance": 6.494630119779209,
+          "max_interhand_distance": 16.0,
+          "foot_moves": 2
+        }
+      },
+      {
+        "name": "Graph Setter",
+        "setter": "graph",
+        "metrics": {
+          "moves": 8,
+          "crosses": 0,
+          "dynos": 1,
+          "bumps": 1,
+          "average_move_distance": 5.4608920799391525,
+          "average_interhand_distance": 5.8331666842699805,
+          "max_interhand_distance": 18.439088914585774,
+          "foot_moves": 2
+        }
+      },
+      {
+        "name": "Neural Setter",
+        "setter": "neural",
+        "metrics": {
+          "moves": 11,
+          "crosses": 0,
+          "dynos": 0,
+          "bumps": 3,
+          "average_move_distance": 5.274550669027159,
+          "average_interhand_distance": 6.383386704386444,
+          "max_interhand_distance": 12.0,
+          "foot_moves": 0
+        }
+      }
+    ]
+  }
+}

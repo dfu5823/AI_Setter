@@ -1,0 +1,326 @@
+:root {
+  --bg: #101010;
+  --panel: #181818;
+  --line: #3b3b3b;
+  --text: #f4f4f2;
+  --muted: #aaa69f;
+  --cyan: #53e6e6;
+  --green: #62d852;
+  --orange: #f3a21b;
+  --purple: #bd45ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background: var(--bg);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  width: min(1220px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 22px 0;
+}
+
+.topbar,
+.workspace,
+.page {
+  display: grid;
+  gap: 20px;
+}
+
+.topbar {
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--cyan);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 34px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.controls,
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: end;
+}
+
+.tabs {
+  justify-content: flex-end;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+select,
+input,
+button {
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--text);
+  background: #202020;
+  font: inherit;
+}
+
+select,
+input {
+  padding: 0 10px;
+}
+
+button {
+  padding: 0 14px;
+  cursor: pointer;
+}
+
+button:hover,
+button.selected {
+  border-color: var(--cyan);
+}
+
+.page {
+  display: none;
+  padding-top: 18px;
+}
+
+.page.active {
+  display: grid;
+}
+
+.pageControls {
+  justify-content: flex-start;
+}
+
+.climbResults {
+  display: grid;
+  gap: 8px;
+  max-height: 220px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px;
+  background: #141414;
+}
+
+.climbResult {
+  display: grid;
+  gap: 4px;
+  min-height: 0;
+  padding: 9px 10px;
+  text-align: left;
+}
+
+.climbResult strong {
+  color: var(--text);
+}
+
+.climbResult span,
+.emptyResults {
+  color: var(--muted);
+}
+
+.climbResult.selected {
+  border-color: var(--cyan);
+}
+
+.workspace {
+  grid-template-columns: minmax(320px, 750px) minmax(260px, 1fr);
+  align-items: start;
+  padding-top: 20px;
+}
+
+.stage {
+  position: relative;
+  width: min(750px, 100%);
+  aspect-ratio: 750 / 925;
+  background: #050505;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#animationCanvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}
+
+aside {
+  display: grid;
+  gap: 16px;
+}
+
+#climbMeta,
+#statusText {
+  color: var(--muted);
+}
+
+.holdCounts,
+.setterPanel,
+.holdTypeButtons,
+.generatorButtons,
+.generatorPanel,
+.formGrid,
+.infoList,
+.analyticsPanel {
+  display: grid;
+  gap: 10px;
+}
+
+.holdCounts {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.countLine {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px;
+  background: var(--panel);
+}
+
+.detailLine {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+  color: var(--muted);
+}
+
+.detailLine strong {
+  color: var(--text);
+  font-weight: 600;
+  text-align: right;
+}
+
+.formGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.holdTypeButtons,
+.generatorButtons {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.analyticsPanel a {
+  color: var(--cyan);
+}
+
+.gradeRangeLabel {
+  min-width: 220px;
+}
+
+.gradeRangeLabel strong,
+.resultCount {
+  color: var(--text);
+}
+
+.rangeTrack {
+  position: relative;
+  display: block;
+  width: 220px;
+  height: 38px;
+}
+
+.rangeTrack::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  top: 18px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0 2%, var(--line) 2% 98%, transparent 98%);
+}
+
+.rangeTrack input[type="range"] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  pointer-events: none;
+  appearance: none;
+}
+
+.rangeTrack input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--cyan);
+  background: #202020;
+}
+
+.rangeTrack input[type="range"]::-moz-range-thumb {
+  pointer-events: auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--cyan);
+  background: #202020;
+}
+
+@media (max-width: 860px) {
+  main {
+    width: min(100vw - 20px, 760px);
+  }
+
+  .topbar,
+  .workspace,
+  .formGrid,
+  .holdTypeButtons,
+  .generatorButtons {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}

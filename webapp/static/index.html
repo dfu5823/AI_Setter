@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Setter</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <main>
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">AI Setter</p>
+          <h1 id="pageTitle">Find a climb</h1>
+        </div>
+        <nav class="tabs" aria-label="Pages">
+          <button class="tabButton selected" data-page="browse" type="button">Find Climbs</button>
+          <button class="tabButton" data-page="set" type="button">Set a Climb</button>
+          <button class="tabButton" data-page="beta" type="button">Beta</button>
+        </nav>
+      </section>
+
+      <section id="browsePage" class="page active">
+        <div class="controls pageControls">
+          <label>
+            Climb
+            <select id="climbSelect"></select>
+          </label>
+          <label>
+            Angle
+            <select id="angleFilter">
+              <option value="0">0°</option>
+              <option value="5">5°</option>
+              <option value="10">10°</option>
+              <option value="15">15°</option>
+              <option value="20">20°</option>
+              <option value="25">25°</option>
+              <option value="30">30°</option>
+              <option value="35">35°</option>
+              <option value="40" selected>40°</option>
+              <option value="45">45°</option>
+              <option value="50">50°</option>
+              <option value="55">55°</option>
+              <option value="60">60°</option>
+              <option value="65">65°</option>
+              <option value="70">70°</option>
+            </select>
+          </label>
+          <label class="gradeRangeLabel">
+            Grade range <strong id="gradeRangeLabel">V0-V16</strong>
+            <span class="rangeTrack" aria-label="Grade range from V0 to V16">
+              <input id="gradeMinRange" type="range" min="0" max="16" step="1" value="0">
+              <input id="gradeMaxRange" type="range" min="0" max="16" step="1" value="16">
+            </span>
+          </label>
+          <label>
+            Sort
+            <select id="sortSelect">
+              <option value="name">Name</option>
+              <option value="gradeAsc">Grade ascending</option>
+              <option value="gradeDesc">Grade descending</option>
+              <option value="ascentsAsc">Ascents ascending</option>
+              <option value="ascentsDesc" selected>Ascents descending</option>
+              <option value="starsAsc">Stars ascending</option>
+              <option value="starsDesc">Stars descending</option>
+              <option value="source">Set by user</option>
+            </select>
+          </label>
+          <label>
+            Source
+            <select id="sourceFilter">
+              <option value="all">All climbs</option>
+              <option value="user">User set</option>
+              <option value="kilter">Kilter data</option>
+            </select>
+          </label>
+          <label>
+            View
+            <select class="viewMode"><option value="2d">2D</option><option value="3d">3D</option></select>
+          </label>
+          <button id="searchClimbsButton" type="button">Search for Climbs</button>
+          <p id="availableClimbCount" class="resultCount">0 climbs</p>
+          <button id="generateBetaButton" type="button">Generate beta</button>
+        </div>
+        <div id="climbResults" class="climbResults" aria-label="Search results"></div>
+      </section>
+
+      <section id="setPage" class="page">
+        <div class="setterPanel">
+          <h2>Set a Climb</h2>
+          <div class="formGrid">
+            <label>
+              Name
+              <input id="newName" value="New Climb">
+            </label>
+            <label>
+              Grade
+              <input id="newGrade" value="V5">
+            </label>
+            <label>
+              Angle
+              <input id="newAngle" value="50">
+            </label>
+            <label>
+              View
+              <select class="viewMode"><option value="2d">2D</option><option value="3d">3D</option></select>
+            </label>
+          </div>
+          <div class="holdTypeButtons">
+            <button data-hold-type="Start" class="selected" type="button">Start</button>
+            <button data-hold-type="Any" type="button">Any</button>
+            <button data-hold-type="Finish" type="button">Finish</button>
+            <button data-hold-type="Feet" type="button">Feet</button>
+          </div>
+          <div class="controls">
+            <button id="clearButton" type="button">Clear</button>
+            <button id="saveButton" type="button">Save climb</button>
+            <button id="setGenerateBetaButton" type="button">Generate beta</button>
+          </div>
+          <div class="generatorPanel">
+            <h3>Generate Climb</h3>
+            <div class="formGrid">
+              <label>Grade <input id="generatorGrade" value="V5"></label>
+              <label>Angle <input id="generatorAngle" value="50"></label>
+              <label>Seed <input id="generatorSeed" value="1"></label>
+              <label>Hand holds <input id="generatorHandCount" value="8"></label>
+              <label>Foot holds <input id="generatorFootCount" value="6"></label>
+              <label>Use hand holds 1-5 <input id="handUsagePreference" value="4"></label>
+              <label>Use foot holds 1-5 <input id="footUsagePreference" value="3"></label>
+            </div>
+            <div class="generatorButtons">
+              <button data-setter="random" type="button">Random Setter</button>
+              <button data-setter="sequential" type="button">Sequential Setter</button>
+              <button data-setter="neural" type="button">Neural Network Setter</button>
+              <button data-setter="graph" type="button">Graph Setter</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="betaPage" class="page">
+        <div class="controls pageControls">
+          <label>
+            Speed
+            <input id="speedInput" type="range" min="0.25" max="2" step="0.05" value="0.7">
+          </label>
+          <label>
+            Units
+            <select id="unitSelect">
+              <option value="imperial">Imperial</option>
+              <option value="metric">Metric</option>
+            </select>
+          </label>
+          <label>
+            Height
+            <input id="heightInput" value="5'6&quot;">
+          </label>
+          <label>
+            Ape index
+            <input id="apeInput" value="+2&quot;">
+          </label>
+          <label>
+            View
+            <select class="viewMode"><option value="2d">2D</option><option value="3d">3D</option></select>
+          </label>
+          <button id="restartBetaButton" type="button">Restart beta</button>
+          <label>
+            Beta mode
+            <select id="betaModeSelect">
+              <option value="handFoot">Hand + foot beta</option>
+              <option value="handOnly">Hand only beta</option>
+            </select>
+          </label>
+          <label>
+            Beta Buddy screenshot
+            <input id="betaBuddyUpload" type="file" accept="image/*">
+          </label>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <div class="stage">
+          <canvas id="boardCanvas" width="750" height="925"></canvas>
+          <canvas id="animationCanvas" width="750" height="925"></canvas>
+          <canvas id="sampleCanvas" class="hidden" width="750" height="1334"></canvas>
+        </div>
+        <aside>
+          <h2 id="climbName">Loading</h2>
+          <p id="climbMeta">Unknown grade · 50 degrees</p>
+          <p id="statusText">Loading climbs.</p>
+          <div class="infoList" id="climbDetails"></div>
+          <div class="holdCounts" id="holdCounts"></div>
+          <div class="infoList" id="sequenceDetails"></div>
+          <div class="analyticsPanel">
+            <h3>Analytics</h3>
+            <button id="generateOutputsButton" type="button">Generate outputs</button>
+            <a id="outputsLink" href="/outputs/manifest.json" target="_blank" rel="noreferrer">Open outputs manifest</a>
+          </div>
+        </aside>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

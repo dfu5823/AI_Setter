@@ -1,0 +1,2173 @@
+{
+  "database": "/Users/danfu/Research/AI_Setter/kilter_climbs_data/oct2025-app-climbs.db",
+  "target": "Kilter Board Original, 12 x 12 with kickboard, product_size_id=10, layout_id=1",
+  "record_count": 261385,
+  "tables": [
+    {
+      "name": "ascents",
+      "rows": 0,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "uuid",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "climb_uuid",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "angle",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "is_mirror",
+          "type": "BOOLEAN",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "user_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "attempt_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "bid_count",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": "1",
+          "pk": 0
+        },
+        {
+          "cid": 7,
+          "name": "quality",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 8,
+          "name": "difficulty",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 9,
+          "name": "is_benchmark",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": "0",
+          "pk": 0
+        },
+        {
+          "cid": 10,
+          "name": "comment",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": "''",
+          "pk": 0
+        },
+        {
+          "cid": 11,
+          "name": "climbed_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 12,
+          "name": "created_at",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": "NULL",
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "uuid": 0,
+        "climb_uuid": 0,
+        "angle": 0,
+        "is_mirror": 0,
+        "user_id": 0,
+        "attempt_id": 0,
+        "bid_count": 0,
+        "quality": 0,
+        "difficulty": 0,
+        "is_benchmark": 0,
+        "comment": 0,
+        "climbed_at": 0,
+        "created_at": 0
+      }
+    },
+    {
+      "name": "attempts",
+      "rows": 38,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "position",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "id": 38,
+        "position": 38,
+        "name": 38
+      }
+    },
+    {
+      "name": "beta_links",
+      "rows": 31379,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "climb_uuid",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "link",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 2
+        },
+        {
+          "cid": 2,
+          "name": "foreign_username",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": "NULL",
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "angle",
+          "type": "INT",
+          "notnull": 0,
+          "dflt_value": "NULL",
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "thumbnail",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": "NULL",
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "is_listed",
+          "type": "BOOLEAN",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "created_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "climb_uuid": 31379,
+        "link": 31379,
+        "foreign_username": 24799,
+        "angle": 16281,
+        "thumbnail": 30380,
+        "is_listed": 31379,
+        "created_at": 31379
+      }
+    },
+    {
+      "name": "bids",
+      "rows": 0,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "uuid",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "user_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "climb_uuid",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "angle",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "is_mirror",
+          "type": "BOOLEAN",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "bid_count",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": "1",
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "comment",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": "''",
+          "pk": 0
+        },
+        {
+          "cid": 7,
+          "name": "climbed_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 8,
+          "name": "created_at",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": "NULL",
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "uuid": 0,
+        "user_id": 0,
+        "climb_uuid": 0,
+        "angle": 0,
+        "is_mirror": 0,
+        "bid_count": 0,
+        "comment": 0,
+        "climbed_at": 0,
+        "created_at": 0
+      }
+    },
+    {
+      "name": "circuits",
+      "rows": 0,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "uuid",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "description",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "color",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "user_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "is_public",
+          "type": "BOOLEAN",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "created_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 7,
+          "name": "updated_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "uuid": 0,
+        "name": 0,
+        "description": 0,
+        "color": 0,
+        "user_id": 0,
+        "is_public": 0,
+        "created_at": 0,
+        "updated_at": 0
+      }
+    },
+    {
+      "name": "circuits_climbs",
+      "rows": 0,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "circuit_uuid",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "climb_uuid",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 2
+        },
+        {
+          "cid": 2,
+          "name": "position",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "circuit_uuid": 0,
+        "climb_uuid": 0,
+        "position": 0
+      }
+    },
+    {
+      "name": "climb_cache_fields",
+      "rows": 192886,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "climb_uuid",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "ascensionist_count",
+          "type": "INT UNSIGNED",
+          "notnull": 0,
+          "dflt_value": "NULL",
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "display_difficulty",
+          "type": "FLOAT UNSIGNED",
+          "notnull": 0,
+          "dflt_value": "NULL",
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "quality_average",
+          "type": "FLOAT UNSIGNED",
+          "notnull": 0,
+          "dflt_value": "NULL",
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "climb_uuid": 192886,
+        "ascensionist_count": 192377,
+        "display_difficulty": 192377,
+        "quality_average": 192377
+      }
+    },
+    {
+      "name": "climb_random_positions",
+      "rows": 0,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "climb_uuid",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "position",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "climb_uuid": 0,
+        "position": 0
+      }
+    },
+    {
+      "name": "climb_stats",
+      "rows": 323416,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "climb_uuid",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "angle",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 2
+        },
+        {
+          "cid": 2,
+          "name": "display_difficulty",
+          "type": "FLOAT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "benchmark_difficulty",
+          "type": "FLOAT UNSIGNED",
+          "notnull": 0,
+          "dflt_value": "NULL",
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "ascensionist_count",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "difficulty_average",
+          "type": "FLOAT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "quality_average",
+          "type": "FLOAT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 7,
+          "name": "fa_username",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 8,
+          "name": "fa_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "climb_uuid": 323416,
+        "angle": 323416,
+        "display_difficulty": 323416,
+        "benchmark_difficulty": 634,
+        "ascensionist_count": 323416,
+        "difficulty_average": 323416,
+        "quality_average": 323416,
+        "fa_username": 323416,
+        "fa_at": 323416
+      }
+    },
+    {
+      "name": "climbs",
+      "rows": 318097,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "uuid",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "layout_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "setter_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "setter_username",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "description",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": "''",
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "hsm",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 7,
+          "name": "edge_left",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 8,
+          "name": "edge_right",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 9,
+          "name": "edge_bottom",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 10,
+          "name": "edge_top",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 11,
+          "name": "angle",
+          "type": "INT",
+          "notnull": 0,
+          "dflt_value": "NULL",
+          "pk": 0
+        },
+        {
+          "cid": 12,
+          "name": "frames_count",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": "1",
+          "pk": 0
+        },
+        {
+          "cid": 13,
+          "name": "frames_pace",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": "0",
+          "pk": 0
+        },
+        {
+          "cid": 14,
+          "name": "frames",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 15,
+          "name": "is_draft",
+          "type": "BOOLEAN",
+          "notnull": 1,
+          "dflt_value": "0",
+          "pk": 0
+        },
+        {
+          "cid": 16,
+          "name": "is_listed",
+          "type": "BOOLEAN",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 17,
+          "name": "created_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 18,
+          "name": "is_nomatch",
+          "type": "BOOLEAN",
+          "notnull": 1,
+          "dflt_value": "0",
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "uuid": 318097,
+        "layout_id": 318097,
+        "setter_id": 318097,
+        "setter_username": 318097,
+        "name": 318097,
+        "description": 318097,
+        "hsm": 318097,
+        "edge_left": 318097,
+        "edge_right": 318097,
+        "edge_bottom": 318097,
+        "edge_top": 318097,
+        "angle": 214523,
+        "frames_count": 318097,
+        "frames_pace": 318097,
+        "frames": 318097,
+        "is_draft": 318097,
+        "is_listed": 318097,
+        "created_at": 318097,
+        "is_nomatch": 318097
+      }
+    },
+    {
+      "name": "difficulty_grades",
+      "rows": 39,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "difficulty",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "boulder_name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "route_name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "is_listed",
+          "type": "BOOLEAN",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "difficulty": 39,
+        "boulder_name": 39,
+        "route_name": 39,
+        "is_listed": 39
+      }
+    },
+    {
+      "name": "holes",
+      "rows": 3294,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "product_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "x",
+          "type": "INT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "y",
+          "type": "INT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "mirrored_hole_id",
+          "type": "INT UNSIGNED",
+          "notnull": 0,
+          "dflt_value": "NULL",
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "mirror_group",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": "0",
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "id": 3294,
+        "product_id": 3294,
+        "name": 3294,
+        "x": 3294,
+        "y": 3294,
+        "mirrored_hole_id": 3294,
+        "mirror_group": 3294
+      }
+    },
+    {
+      "name": "kits",
+      "rows": 97,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "serial_number",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "is_autoconnect",
+          "type": "BOOLEAN",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "is_listed",
+          "type": "BOOLEAN",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "created_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "updated_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "serial_number": 97,
+        "name": 97,
+        "is_autoconnect": 97,
+        "is_listed": 97,
+        "created_at": 97,
+        "updated_at": 97
+      }
+    },
+    {
+      "name": "layouts",
+      "rows": 8,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "product_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "instagram_caption",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "is_mirrored",
+          "type": "BOOLEAN",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "is_listed",
+          "type": "BOOLEAN",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "password",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": "NULL",
+          "pk": 0
+        },
+        {
+          "cid": 7,
+          "name": "created_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "id": 8,
+        "product_id": 8,
+        "name": 8,
+        "instagram_caption": 8,
+        "is_mirrored": 8,
+        "is_listed": 8,
+        "password": 6,
+        "created_at": 8
+      }
+    },
+    {
+      "name": "leds",
+      "rows": 7828,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "product_size_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "hole_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "position",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "id": 7828,
+        "product_size_id": 7828,
+        "hole_id": 7828,
+        "position": 7828
+      }
+    },
+    {
+      "name": "placement_roles",
+      "rows": 30,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "product_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "position",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "full_name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "led_color",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "screen_color",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "id": 30,
+        "product_id": 30,
+        "position": 30,
+        "name": 30,
+        "full_name": 30,
+        "led_color": 30,
+        "screen_color": 30
+      }
+    },
+    {
+      "name": "placements",
+      "rows": 3773,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "layout_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "hole_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "set_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "default_placement_role_id",
+          "type": "INT UNSIGNED",
+          "notnull": 0,
+          "dflt_value": "NULL",
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "id": 3773,
+        "layout_id": 3773,
+        "hole_id": 3773,
+        "set_id": 3773,
+        "default_placement_role_id": 2621
+      }
+    },
+    {
+      "name": "product_sizes",
+      "rows": 22,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "product_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "edge_left",
+          "type": "INT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "edge_right",
+          "type": "INT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "edge_bottom",
+          "type": "INT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "edge_top",
+          "type": "INT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 7,
+          "name": "description",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 8,
+          "name": "image_filename",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 9,
+          "name": "position",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 10,
+          "name": "is_listed",
+          "type": "BOOLEAN",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "id": 22,
+        "product_id": 22,
+        "edge_left": 22,
+        "edge_right": 22,
+        "edge_bottom": 22,
+        "edge_top": 22,
+        "name": 22,
+        "description": 22,
+        "image_filename": 22,
+        "position": 22,
+        "is_listed": 22
+      }
+    },
+    {
+      "name": "product_sizes_layouts_sets",
+      "rows": 41,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "product_size_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "layout_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "set_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "image_filename",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "is_listed",
+          "type": "BOOLEAN",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "id": 41,
+        "product_size_id": 41,
+        "layout_id": 41,
+        "set_id": 41,
+        "image_filename": 41,
+        "is_listed": 41
+      }
+    },
+    {
+      "name": "products",
+      "rows": 7,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "is_listed",
+          "type": "BOOLEAN",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "password",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": "NULL",
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "min_count_in_frame",
+          "type": "INT UNSIGNED",
+          "notnull": 0,
+          "dflt_value": "NULL",
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "max_count_in_frame",
+          "type": "INT UNSIGNED",
+          "notnull": 0,
+          "dflt_value": "NULL",
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "id": 7,
+        "name": 7,
+        "is_listed": 7,
+        "password": 0,
+        "min_count_in_frame": 7,
+        "max_count_in_frame": 7
+      }
+    },
+    {
+      "name": "products_angles",
+      "rows": 56,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "product_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "angle",
+          "type": "INT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 2
+        }
+      ],
+      "populated": {
+        "product_id": 56,
+        "angle": 56
+      }
+    },
+    {
+      "name": "sets",
+      "rows": 11,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "hsm",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "id": 11,
+        "name": 11,
+        "hsm": 11
+      }
+    },
+    {
+      "name": "shared_syncs",
+      "rows": 17,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "table_name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "last_synchronized_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "table_name": 17,
+        "last_synchronized_at": 17
+      }
+    },
+    {
+      "name": "sqlite_stat1",
+      "rows": 23,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "tbl",
+          "type": "",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 1,
+          "name": "idx",
+          "type": "",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "stat",
+          "type": "",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "tbl": 23,
+        "idx": 23,
+        "stat": 23
+      }
+    },
+    {
+      "name": "tags",
+      "rows": 0,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "entity_uuid",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "user_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 2
+        },
+        {
+          "cid": 2,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 3
+        },
+        {
+          "cid": 3,
+          "name": "is_listed",
+          "type": "BOOLEAN",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "entity_uuid": 0,
+        "user_id": 0,
+        "name": 0,
+        "is_listed": 0
+      }
+    },
+    {
+      "name": "user_permissions",
+      "rows": 0,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "user_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 2
+        }
+      ],
+      "populated": {
+        "user_id": 0,
+        "name": 0
+      }
+    },
+    {
+      "name": "user_syncs",
+      "rows": 0,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "user_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "table_name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 2
+        },
+        {
+          "cid": 2,
+          "name": "last_synchronized_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "user_id": 0,
+        "table_name": 0,
+        "last_synchronized_at": 0
+      }
+    },
+    {
+      "name": "users",
+      "rows": 0,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "username",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "created_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "id": 0,
+        "username": 0,
+        "created_at": 0
+      }
+    },
+    {
+      "name": "walls",
+      "rows": 0,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "uuid",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "user_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "product_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "is_adjustable",
+          "type": "BOOLEAN",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "angle",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "layout_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 7,
+          "name": "product_size_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 8,
+          "name": "hsm",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 9,
+          "name": "serial_number",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": "NULL",
+          "pk": 0
+        },
+        {
+          "cid": 10,
+          "name": "created_at",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": "NULL",
+          "pk": 0
+        }
+      ],
+      "populated": {
+        "uuid": 0,
+        "user_id": 0,
+        "name": 0,
+        "product_id": 0,
+        "is_adjustable": 0,
+        "angle": 0,
+        "layout_id": 0,
+        "product_size_id": 0,
+        "hsm": 0,
+        "serial_number": 0,
+        "created_at": 0
+      }
+    },
+    {
+      "name": "walls_sets",
+      "rows": 0,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "wall_uuid",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "set_id",
+          "type": "INT UNSIGNED",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 2
+        }
+      ],
+      "populated": {
+        "wall_uuid": 0,
+        "set_id": 0
+      }
+    }
+  ],
+  "grade_distribution_by_angle": {
+    "0": {
+      "4a/V0": 457,
+      "4b/V0": 296,
+      "4c/V0": 247,
+      "5a/V1": 322,
+      "5b/V1": 294,
+      "5c/V2": 333,
+      "6a/V3": 329,
+      "6a+/V3": 235,
+      "6b/V4": 245,
+      "6b+/V4": 110,
+      "6c/V5": 103,
+      "6c+/V5": 83,
+      "7a/V6": 23,
+      "7a+/V7": 9,
+      "7b/V8": 1,
+      "7b+/V8": 1,
+      "7c/V9": 3,
+      "7c+/V10": 1
+    },
+    "5": {
+      "4a/V0": 196,
+      "4b/V0": 214,
+      "4c/V0": 226,
+      "5a/V1": 206,
+      "5b/V1": 234,
+      "5c/V2": 312,
+      "6a/V3": 280,
+      "6a+/V3": 177,
+      "6b/V4": 188,
+      "6b+/V4": 76,
+      "6c/V5": 82,
+      "6c+/V5": 37,
+      "7a/V6": 22,
+      "7a+/V7": 6,
+      "7b/V8": 1,
+      "7b+/V8": 1,
+      "8a/V11": 1
+    },
+    "10": {
+      "4a/V0": 491,
+      "4b/V0": 437,
+      "4c/V0": 470,
+      "5a/V1": 442,
+      "5b/V1": 571,
+      "5c/V2": 720,
+      "6a/V3": 755,
+      "6a+/V3": 444,
+      "6b/V4": 508,
+      "6b+/V4": 267,
+      "6c/V5": 250,
+      "6c+/V5": 97,
+      "7a/V6": 101,
+      "7a+/V7": 33,
+      "7b/V8": 11,
+      "7b+/V8": 10,
+      "7c/V9": 3,
+      "7c+/V10": 2,
+      "8a/V11": 2
+    },
+    "15": {
+      "4a/V0": 428,
+      "4b/V0": 412,
+      "4c/V0": 438,
+      "5a/V1": 634,
+      "5b/V1": 777,
+      "5c/V2": 1142,
+      "6a/V3": 1257,
+      "6a+/V3": 846,
+      "6b/V4": 880,
+      "6b+/V4": 602,
+      "6c/V5": 538,
+      "6c+/V5": 302,
+      "7a/V6": 294,
+      "7a+/V7": 154,
+      "7b/V8": 37,
+      "7b+/V8": 9,
+      "7c/V9": 1,
+      "7c+/V10": 2,
+      "8a/V11": 1,
+      "8a+/V12": 1,
+      "8c/V15": 1
+    },
+    "20": {
+      "4a/V0": 582,
+      "4b/V0": 602,
+      "4c/V0": 692,
+      "5a/V1": 952,
+      "5b/V1": 1250,
+      "5c/V2": 1999,
+      "6a/V3": 2292,
+      "6a+/V3": 1576,
+      "6b/V4": 1812,
+      "6b+/V4": 1144,
+      "6c/V5": 1232,
+      "6c+/V5": 761,
+      "7a/V6": 761,
+      "7a+/V7": 365,
+      "7b/V8": 140,
+      "7b+/V8": 34,
+      "7c/V9": 18,
+      "7c+/V10": 7,
+      "8a/V11": 1
+    },
+    "25": {
+      "4a/V0": 336,
+      "4b/V0": 418,
+      "4c/V0": 465,
+      "5a/V1": 609,
+      "5b/V1": 866,
+      "5c/V2": 1504,
+      "6a/V3": 1798,
+      "6a+/V3": 1367,
+      "6b/V4": 1607,
+      "6b+/V4": 1115,
+      "6c/V5": 1213,
+      "6c+/V5": 669,
+      "7a/V6": 764,
+      "7a+/V7": 366,
+      "7b/V8": 148,
+      "7b+/V8": 45,
+      "7c/V9": 10,
+      "7c+/V10": 4,
+      "8b+/V14": 1
+    },
+    "30": {
+      "4a/V0": 587,
+      "4b/V0": 608,
+      "4c/V0": 700,
+      "5a/V1": 1045,
+      "5b/V1": 1565,
+      "5c/V2": 2756,
+      "6a/V3": 4234,
+      "6a+/V3": 3425,
+      "6b/V4": 5019,
+      "6b+/V4": 3563,
+      "6c/V5": 4446,
+      "6c+/V5": 2697,
+      "7a/V6": 3262,
+      "7a+/V7": 1716,
+      "7b/V8": 908,
+      "7b+/V8": 393,
+      "7c/V9": 206,
+      "7c+/V10": 64,
+      "8a/V11": 16,
+      "8a+/V12": 3,
+      "8b/V13": 3,
+      "8b+/V14": 3,
+      "8c/V15": 1
+    },
+    "35": {
+      "4a/V0": 206,
+      "4b/V0": 261,
+      "4c/V0": 278,
+      "5a/V1": 422,
+      "5b/V1": 666,
+      "5c/V2": 1054,
+      "6a/V3": 1606,
+      "6a+/V3": 1360,
+      "6b/V4": 1987,
+      "6b+/V4": 1664,
+      "6c/V5": 2105,
+      "6c+/V5": 1476,
+      "7a/V6": 1995,
+      "7a+/V7": 1233,
+      "7b/V8": 663,
+      "7b+/V8": 311,
+      "7c/V9": 195,
+      "7c+/V10": 79,
+      "8a/V11": 13,
+      "8a+/V12": 1
+    },
+    "40": {
+      "4a/V0": 570,
+      "4b/V0": 707,
+      "4c/V0": 632,
+      "5a/V1": 948,
+      "5b/V1": 1470,
+      "5c/V2": 2270,
+      "6a/V3": 4110,
+      "6a+/V3": 3747,
+      "6b/V4": 6551,
+      "6b+/V4": 5765,
+      "6c/V5": 9224,
+      "6c+/V5": 6962,
+      "7a/V6": 12077,
+      "7a+/V7": 9285,
+      "7b/V8": 6082,
+      "7b+/V8": 3208,
+      "7c/V9": 2272,
+      "7c+/V10": 821,
+      "8a/V11": 242,
+      "8a+/V12": 58,
+      "8b/V13": 7
+    },
+    "45": {
+      "4a/V0": 168,
+      "4b/V0": 284,
+      "4c/V0": 274,
+      "5a/V1": 389,
+      "5b/V1": 564,
+      "5c/V2": 932,
+      "6a/V3": 1583,
+      "6a+/V3": 1541,
+      "6b/V4": 2579,
+      "6b+/V4": 2306,
+      "6c/V5": 3659,
+      "6c+/V5": 3178,
+      "7a/V6": 5953,
+      "7a+/V7": 5069,
+      "7b/V8": 3615,
+      "7b+/V8": 2083,
+      "7c/V9": 1892,
+      "7c+/V10": 955,
+      "8a/V11": 357,
+      "8a+/V12": 69,
+      "8b/V13": 16
+    },
+    "50": {
+      "4a/V0": 136,
+      "4b/V0": 217,
+      "4c/V0": 172,
+      "5a/V1": 280,
+      "5b/V1": 380,
+      "5c/V2": 575,
+      "6a/V3": 1023,
+      "6a+/V3": 896,
+      "6b/V4": 1536,
+      "6b+/V4": 1373,
+      "6c/V5": 2224,
+      "6c+/V5": 1929,
+      "7a/V6": 3612,
+      "7a+/V7": 3528,
+      "7b/V8": 3210,
+      "7b+/V8": 2267,
+      "7c/V9": 2523,
+      "7c+/V10": 1560,
+      "8a/V11": 870,
+      "8a+/V12": 368,
+      "8b/V13": 90,
+      "8b+/V14": 2,
+      "8c/V15": 2
+    },
+    "55": {
+      "4a/V0": 19,
+      "4b/V0": 53,
+      "4c/V0": 66,
+      "5a/V1": 69,
+      "5b/V1": 104,
+      "5c/V2": 136,
+      "6a/V3": 220,
+      "6a+/V3": 199,
+      "6b/V4": 309,
+      "6b+/V4": 273,
+      "6c/V5": 377,
+      "6c+/V5": 301,
+      "7a/V6": 613,
+      "7a+/V7": 483,
+      "7b/V8": 456,
+      "7b+/V8": 436,
+      "7c/V9": 545,
+      "7c+/V10": 384,
+      "8a/V11": 410,
+      "8a+/V12": 138,
+      "8b/V13": 19,
+      "8b+/V14": 3
+    },
+    "60": {
+      "4a/V0": 5,
+      "4b/V0": 57,
+      "4c/V0": 60,
+      "5a/V1": 80,
+      "5b/V1": 150,
+      "5c/V2": 131,
+      "6a/V3": 235,
+      "6a+/V3": 224,
+      "6b/V4": 304,
+      "6b+/V4": 260,
+      "6c/V5": 414,
+      "6c+/V5": 367,
+      "7a/V6": 666,
+      "7a+/V7": 592,
+      "7b/V8": 473,
+      "7b+/V8": 384,
+      "7c/V9": 575,
+      "7c+/V10": 486,
+      "8a/V11": 259,
+      "8a+/V12": 64,
+      "8b/V13": 26,
+      "8b+/V14": 2,
+      "8c/V15": 4
+    },
+    "65": {
+      "4a/V0": 9,
+      "4b/V0": 7,
+      "4c/V0": 16,
+      "5a/V1": 23,
+      "5b/V1": 34,
+      "5c/V2": 30,
+      "6a/V3": 32,
+      "6a+/V3": 38,
+      "6b/V4": 61,
+      "6b+/V4": 45,
+      "6c/V5": 62,
+      "6c+/V5": 52,
+      "7a/V6": 91,
+      "7a+/V7": 98,
+      "7b/V8": 63,
+      "7b+/V8": 33,
+      "7c/V9": 45,
+      "7c+/V10": 25,
+      "8a/V11": 32,
+      "8a+/V12": 10,
+      "8b+/V14": 4
+    },
+    "70": {
+      "4a/V0": 51,
+      "4b/V0": 22,
+      "4c/V0": 24,
+      "5a/V1": 53,
+      "5b/V1": 62,
+      "5c/V2": 77,
+      "6a/V3": 98,
+      "6a+/V3": 89,
+      "6b/V4": 103,
+      "6b+/V4": 89,
+      "6c/V5": 112,
+      "6c+/V5": 135,
+      "7a/V6": 217,
+      "7a+/V7": 169,
+      "7b/V8": 168,
+      "7b+/V8": 113,
+      "7c/V9": 121,
+      "7c+/V10": 79,
+      "8a/V11": 48,
+      "8a+/V12": 19,
+      "8b/V13": 3,
+      "8b+/V14": 3,
+      "8c/V15": 1
+    }
+  }
+}

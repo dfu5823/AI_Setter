@@ -1,0 +1,70 @@
+#!/usr/bin/env python3
+"""
+Ways to run:
+  scripts/show_beta --name "Tap Tap Tap" --angle 40
+  scripts/show_beta --grade V5 --angle 40
+  scripts/show_beta --name "wagon lite" --angle 40 --port 8000
+  scripts/show_beta --grade V8 --angle 25 --open
+
+Builds a Beta page URL for a matching climb name or a random climb at the requested
+grade/angle. If the web app is already running, it prints the URL. If not, it starts
+the local web server on the requested port. Pass --open to open the URL in a browser.
+"""
+
+from __future__ import annotations
+
+import argparse
+import os
+import subprocess
+import sys
+import urllib.parse
+import urllib.request
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+PYTHON = os.environ.get("AI_SETTER_PYTHON", "/Users/danfu/miniconda3/envs/ai_setter/bin/python")
+
+
+def server_is_running(port: int) -> bool:
+    try:
+        urllib.request.urlopen(f"http://127.0.0.1:{port}/", timeout=0.5).close()
+        return True
+    except Exception:
+        return False
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--name", default="")
+    parser.add_argument("--grade", default="")
+    parser.add_argument("--angle", default="40")
+    parser.add_argument("--port", type=int, default=int(os.environ.get("AI_SETTER_PORT", "8000")))
+    parser.add_argument("--open", action="store_true")
+    args = parser.parse_args()
+
+    name = args.name
+    grade = args.grade
+    if not name and not grade and sys.stdin.isatty():
+        name = input("Climb name, or blank to choose by grade: ").strip()
+    if not name and not grade and sys.stdin.isatty():
+        grade = input("Grade, for example V5: ").strip()
+
+    query = {"page": "beta", "angle": args.angle}
+    if name:
+        query["name"] = name
+    if grade:
+        query["grade"] = grade
+    url = f"http://127.0.0.1:{args.port}/?{urllib.parse.urlencode(query)}"
+
+    if args.open:
+        subprocess.Popen(["open", url])
+    if server_is_running(args.port):
+        print(url)
+        return 0
+    print(f"Starting AI Setter web app at {url}")
+    return subprocess.call([PYTHON, "webapp/server.py", "--port", str(args.port)], cwd=ROOT)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

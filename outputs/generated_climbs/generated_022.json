@@ -1,0 +1,643 @@
+{
+  "name": "Sequential Setter",
+  "grade": "V5",
+  "angle": "50",
+  "matching_allowed": true,
+  "holds": {
+    "Start": [
+      [
+        26,
+        14
+      ],
+      [
+        33,
+        13
+      ]
+    ],
+    "Any": [
+      [
+        27,
+        19
+      ],
+      [
+        20,
+        20
+      ],
+      [
+        16,
+        20
+      ],
+      [
+        30,
+        26
+      ]
+    ],
+    "Finish": [
+      [
+        28,
+        38
+      ]
+    ],
+    "Feet": [
+      [
+        14,
+        4
+      ],
+      [
+        18,
+        2
+      ],
+      [
+        20,
+        8
+      ],
+      [
+        16,
+        8
+      ],
+      [
+        16,
+        4
+      ],
+      [
+        17,
+        1
+      ]
+    ]
+  },
+  "sequence": [
+    {
+      "x": 26,
+      "y": 14,
+      "type": "Start",
+      "hand": "left",
+      "move": 0,
+      "label": "0L",
+      "left": [
+        26,
+        14
+      ],
+      "right": [
+        33,
+        13
+      ],
+      "node": {
+        "left": [
+          26,
+          14
+        ],
+        "right": [
+          33,
+          13
+        ]
+      },
+      "event": "start",
+      "crossed": false,
+      "interhand_distance": 7.0710678118654755
+    },
+    {
+      "x": 33,
+      "y": 13,
+      "type": "Start",
+      "hand": "right",
+      "move": 0,
+      "label": "0R",
+      "left": [
+        26,
+        14
+      ],
+      "right": [
+        33,
+        13
+      ],
+      "node": {
+        "left": [
+          26,
+          14
+        ],
+        "right": [
+          33,
+          13
+        ]
+      },
+      "event": "start",
+      "crossed": false,
+      "interhand_distance": 7.0710678118654755
+    },
+    {
+      "x": 27,
+      "y": 19,
+      "type": "Any",
+      "hand": "right",
+      "move": 1,
+      "label": "1R",
+      "left": [
+        26,
+        14
+      ],
+      "right": [
+        27,
+        19
+      ],
+      "node": {
+        "left": [
+          26,
+          14
+        ],
+        "right": [
+          27,
+          19
+        ]
+      },
+      "event": "hand_move",
+      "crossed": false,
+      "interhand_distance": 5.0990195135927845
+    },
+    {
+      "x": 20,
+      "y": 20,
+      "type": "Any",
+      "hand": "left",
+      "move": 2,
+      "label": "2L",
+      "left": [
+        20,
+        20
+      ],
+      "right": [
+        27,
+        19
+      ],
+      "node": {
+        "left": [
+          20,
+          20
+        ],
+        "right": [
+          27,
+          19
+        ]
+      },
+      "event": "hand_move",
+      "crossed": false,
+      "interhand_distance": 7.0710678118654755
+    },
+    {
+      "x": 16,
+      "y": 20,
+      "type": "Any",
+      "hand": "right",
+      "move": 3,
+      "label": "3R",
+      "left": [
+        20,
+        20
+      ],
+      "right": [
+        16,
+        20
+      ],
+      "node": {
+        "left": [
+          20,
+          20
+        ],
+        "right": [
+          16,
+          20
+        ]
+      },
+      "event": "cross",
+      "crossed": true,
+      "interhand_distance": 4.0
+    },
+    {
+      "x": 30,
+      "y": 26,
+      "type": "Any",
+      "hand": "right",
+      "move": 4,
+      "label": "4R",
+      "left": [
+        20,
+        20
+      ],
+      "right": [
+        30,
+        26
+      ],
+      "node": {
+        "left": [
+          20,
+          20
+        ],
+        "right": [
+          30,
+          26
+        ]
+      },
+      "event": "bump",
+      "crossed": false,
+      "interhand_distance": 11.661903789690601
+    },
+    {
+      "x": 28,
+      "y": 38,
+      "type": "Finish",
+      "hand": "left",
+      "move": 5,
+      "label": "5L",
+      "left": [
+        28,
+        38
+      ],
+      "right": [
+        30,
+        26
+      ],
+      "node": {
+        "left": [
+          28,
+          38
+        ],
+        "right": [
+          30,
+          26
+        ]
+      },
+      "event": "dyno",
+      "crossed": false,
+      "interhand_distance": 12.165525060596439
+    },
+    {
+      "x": 28,
+      "y": 38,
+      "type": "Finish",
+      "hand": "right",
+      "move": 6,
+      "label": "6R",
+      "left": [
+        28,
+        38
+      ],
+      "right": [
+        28,
+        38
+      ],
+      "node": {
+        "left": [
+          28,
+          38
+        ],
+        "right": [
+          28,
+          38
+        ]
+      },
+      "event": "finish_match",
+      "crossed": false,
+      "interhand_distance": 0.0
+    }
+  ],
+  "hand_sequence": [
+    {
+      "x": 26,
+      "y": 14,
+      "type": "Start",
+      "hand": "left",
+      "move": 0,
+      "label": "0L",
+      "left": [
+        26,
+        14
+      ],
+      "right": [
+        33,
+        13
+      ],
+      "node": {
+        "left": [
+          26,
+          14
+        ],
+        "right": [
+          33,
+          13
+        ]
+      },
+      "event": "start",
+      "crossed": false,
+      "interhand_distance": 7.0710678118654755
+    },
+    {
+      "x": 33,
+      "y": 13,
+      "type": "Start",
+      "hand": "right",
+      "move": 0,
+      "label": "0R",
+      "left": [
+        26,
+        14
+      ],
+      "right": [
+        33,
+        13
+      ],
+      "node": {
+        "left": [
+          26,
+          14
+        ],
+        "right": [
+          33,
+          13
+        ]
+      },
+      "event": "start",
+      "crossed": false,
+      "interhand_distance": 7.0710678118654755
+    },
+    {
+      "x": 27,
+      "y": 19,
+      "type": "Any",
+      "hand": "right",
+      "move": 1,
+      "label": "1R",
+      "left": [
+        26,
+        14
+      ],
+      "right": [
+        27,
+        19
+      ],
+      "node": {
+        "left": [
+          26,
+          14
+        ],
+        "right": [
+          27,
+          19
+        ]
+      },
+      "event": "hand_move",
+      "crossed": false,
+      "interhand_distance": 5.0990195135927845
+    },
+    {
+      "x": 20,
+      "y": 20,
+      "type": "Any",
+      "hand": "left",
+      "move": 2,
+      "label": "2L",
+      "left": [
+        20,
+        20
+      ],
+      "right": [
+        27,
+        19
+      ],
+      "node": {
+        "left": [
+          20,
+          20
+        ],
+        "right": [
+          27,
+          19
+        ]
+      },
+      "event": "hand_move",
+      "crossed": false,
+      "interhand_distance": 7.0710678118654755
+    },
+    {
+      "x": 16,
+      "y": 20,
+      "type": "Any",
+      "hand": "right",
+      "move": 3,
+      "label": "3R",
+      "left": [
+        20,
+        20
+      ],
+      "right": [
+        16,
+        20
+      ],
+      "node": {
+        "left": [
+          20,
+          20
+        ],
+        "right": [
+          16,
+          20
+        ]
+      },
+      "event": "cross",
+      "crossed": true,
+      "interhand_distance": 4.0
+    },
+    {
+      "x": 30,
+      "y": 26,
+      "type": "Any",
+      "hand": "right",
+      "move": 4,
+      "label": "4R",
+      "left": [
+        20,
+        20
+      ],
+      "right": [
+        30,
+        26
+      ],
+      "node": {
+        "left": [
+          20,
+          20
+        ],
+        "right": [
+          30,
+          26
+        ]
+      },
+      "event": "bump",
+      "crossed": false,
+      "interhand_distance": 11.661903789690601
+    },
+    {
+      "x": 28,
+      "y": 38,
+      "type": "Finish",
+      "hand": "left",
+      "move": 5,
+      "label": "5L",
+      "left": [
+        28,
+        38
+      ],
+      "right": [
+        30,
+        26
+      ],
+      "node": {
+        "left": [
+          28,
+          38
+        ],
+        "right": [
+          30,
+          26
+        ]
+      },
+      "event": "dyno",
+      "crossed": false,
+      "interhand_distance": 12.165525060596439
+    },
+    {
+      "x": 28,
+      "y": 38,
+      "type": "Finish",
+      "hand": "right",
+      "move": 6,
+      "label": "6R",
+      "left": [
+        28,
+        38
+      ],
+      "right": [
+        28,
+        38
+      ],
+      "node": {
+        "left": [
+          28,
+          38
+        ],
+        "right": [
+          28,
+          38
+        ]
+      },
+      "event": "finish_match",
+      "crossed": false,
+      "interhand_distance": 0.0
+    }
+  ],
+  "foot_sequence": [
+    {
+      "move": 0,
+      "left": [
+        18,
+        2
+      ],
+      "right": [
+        16,
+        4
+      ]
+    },
+    {
+      "move": 0,
+      "left": [
+        18,
+        2
+      ],
+      "right": [
+        16,
+        4
+      ]
+    },
+    {
+      "move": 1,
+      "left": [
+        18,
+        2
+      ],
+      "right": [
+        16,
+        4
+      ]
+    },
+    {
+      "move": 2,
+      "left": [
+        18,
+        2
+      ],
+      "right": [
+        16,
+        4
+      ]
+    },
+    {
+      "move": 3,
+      "left": [
+        18,
+        2
+      ],
+      "right": [
+        16,
+        4
+      ]
+    },
+    {
+      "move": 4,
+      "left": [
+        18,
+        2
+      ],
+      "right": [
+        16,
+        4
+      ]
+    },
+    {
+      "move": 5,
+      "left": [
+        27,
+        19
+      ],
+      "right": [
+        16,
+        4
+      ]
+    },
+    {
+      "move": 6,
+      "left": [
+        27,
+        19
+      ],
+      "right": [
+        30,
+        26
+      ]
+    }
+  ],
+  "sequence_metrics": {
+    "moves": 8,
+    "crosses": 1,
+    "dynos": 1,
+    "bumps": 1,
+    "average_move_distance": 7.717784038613396,
+    "average_interhand_distance": 6.767456474934532,
+    "max_interhand_distance": 12.165525060596439,
+    "foot_moves": 2
+  },
+  "setter": "sequential",
+  "selection_notes": [
+    "Sequential setter: chose start and finish from empirical corpus frequencies.",
+    "Middle hands are sampled from heuristic nearest-neighbor transition distributions.",
+    "Generated 8 sequenced hand contacts from training-set transition counts."
+  ],
+  "selection_explanation": "Model description: empirical sequential setter samples a start hold from corpus start frequencies, then repeatedly samples the next hand from the outgoing transition Counter for the current hold after filtering to upward/nearby candidates, and finally adds frequent corpus feet.\nHold-By-Hold Explanation:\n1. Start (26, 14): start_count=57, total_starts=18529, p=0.0031.\n2. Start (33, 13): transition_from=(26, 14), edge_count=0, outgoing_total=160, p=0.0000.\n3. Any (27, 19): transition_from=(33, 13), edge_count=2, outgoing_total=22, p=0.0909.\n4. Any (20, 20): transition_from=(27, 19), edge_count=0, outgoing_total=23, p=0.0000.\n5. Any (16, 20): transition_from=(20, 20), edge_count=29, outgoing_total=701, p=0.0414.\n6. Any (30, 26): transition_from=(16, 20), edge_count=1, outgoing_total=751, p=0.0013.\n7. Finish (28, 38): transition_from=(30, 26), edge_count=0, outgoing_total=169, p=0.0000.\n8. Finish (28, 38): transition_from=(28, 38), edge_count=303, outgoing_total=422, p=0.7180.\nFoot 1. (14, 4): foot_count=806, total_feet=58861, p=0.0137.\nFoot 2. (18, 2): foot_count=799, total_feet=58861, p=0.0136.\nFoot 3. (20, 8): foot_count=688, total_feet=58861, p=0.0117.\nFoot 4. (16, 8): foot_count=656, total_feet=58861, p=0.0111.\nFoot 5. (16, 4): foot_count=651, total_feet=58861, p=0.0111.\nFoot 6. (17, 1): foot_count=646, total_feet=58861, p=0.0110.\nFinish prior (28, 38): finish_count=438, total_finishes=12912, p=0.0339."
+}

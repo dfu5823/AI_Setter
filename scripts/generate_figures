@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+"""
+Ways to run:
+  scripts/generate_figures
+  scripts/generate_figures --limit 5000
+  scripts/generate_figures --limit 50000
+  scripts/generate_figures --train-neural --epochs 5
+
+Regenerates figure/table artifacts through the preprocessing pipeline. Use a limit
+for quick plotting checks or omit it for the full configured dataset.
+"""
+
+from __future__ import annotations
+
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+PYTHON = os.environ.get("AI_SETTER_PYTHON", "/Users/danfu/miniconda3/envs/ai_setter/bin/python")
+
+
+def main() -> int:
+    return subprocess.call([PYTHON, "-m", "ai_setters.preprocess_and_train", *sys.argv[1:]], cwd=ROOT)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

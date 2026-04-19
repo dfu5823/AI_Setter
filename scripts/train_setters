@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+"""
+Ways to run:
+  scripts/train_setters
+  scripts/train_setters --limit 50000
+  scripts/train_setters --epochs 35 --batch-size 512
+  scripts/train_setters --limit 10000 --epochs 5
+
+Runs the full preprocessing pipeline with neural setter training enabled. This also
+exports generated climbs, generated sequences, evaluation metrics, figures, and
+saved setter/model artifacts.
+"""
+
+from __future__ import annotations
+
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+PYTHON = os.environ.get("AI_SETTER_PYTHON", "/Users/danfu/miniconda3/envs/ai_setter/bin/python")
+
+
+def main() -> int:
+    return subprocess.call([PYTHON, "-m", "ai_setters.preprocess_and_train", "--train-neural", *sys.argv[1:]], cwd=ROOT)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

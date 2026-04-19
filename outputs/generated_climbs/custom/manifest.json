@@ -1,0 +1,602 @@
+[
+  {
+    "index": 1,
+    "setter": "random",
+    "grade": "V0",
+    "name": "Random Setter"
+  },
+  {
+    "index": 2,
+    "setter": "random",
+    "grade": "V1",
+    "name": "Random Setter"
+  },
+  {
+    "index": 3,
+    "setter": "random",
+    "grade": "V2",
+    "name": "Random Setter"
+  },
+  {
+    "index": 4,
+    "setter": "random",
+    "grade": "V3",
+    "name": "Random Setter"
+  },
+  {
+    "index": 5,
+    "setter": "random",
+    "grade": "V4",
+    "name": "Random Setter"
+  },
+  {
+    "index": 6,
+    "setter": "random",
+    "grade": "V5",
+    "name": "Random Setter"
+  },
+  {
+    "index": 7,
+    "setter": "random",
+    "grade": "V6",
+    "name": "Random Setter"
+  },
+  {
+    "index": 8,
+    "setter": "random",
+    "grade": "V7",
+    "name": "Random Setter"
+  },
+  {
+    "index": 9,
+    "setter": "random",
+    "grade": "V8",
+    "name": "Random Setter"
+  },
+  {
+    "index": 10,
+    "setter": "random",
+    "grade": "V9",
+    "name": "Random Setter"
+  },
+  {
+    "index": 11,
+    "setter": "random",
+    "grade": "V10",
+    "name": "Random Setter"
+  },
+  {
+    "index": 12,
+    "setter": "random",
+    "grade": "V11",
+    "name": "Random Setter"
+  },
+  {
+    "index": 13,
+    "setter": "random",
+    "grade": "V12",
+    "name": "Random Setter"
+  },
+  {
+    "index": 14,
+    "setter": "random",
+    "grade": "V13",
+    "name": "Random Setter"
+  },
+  {
+    "index": 15,
+    "setter": "random",
+    "grade": "V14",
+    "name": "Random Setter"
+  },
+  {
+    "index": 16,
+    "setter": "sequential",
+    "grade": "V0",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 17,
+    "setter": "sequential",
+    "grade": "V1",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 18,
+    "setter": "sequential",
+    "grade": "V2",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 19,
+    "setter": "sequential",
+    "grade": "V3",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 20,
+    "setter": "sequential",
+    "grade": "V4",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 21,
+    "setter": "sequential",
+    "grade": "V5",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 22,
+    "setter": "sequential",
+    "grade": "V6",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 23,
+    "setter": "sequential",
+    "grade": "V7",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 24,
+    "setter": "sequential",
+    "grade": "V8",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 25,
+    "setter": "sequential",
+    "grade": "V9",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 26,
+    "setter": "sequential",
+    "grade": "V10",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 27,
+    "setter": "sequential",
+    "grade": "V11",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 28,
+    "setter": "sequential",
+    "grade": "V12",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 29,
+    "setter": "sequential",
+    "grade": "V13",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 30,
+    "setter": "sequential",
+    "grade": "V14",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 31,
+    "setter": "graph",
+    "grade": "V0",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 32,
+    "setter": "graph",
+    "grade": "V1",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 33,
+    "setter": "graph",
+    "grade": "V2",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 34,
+    "setter": "graph",
+    "grade": "V3",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 35,
+    "setter": "graph",
+    "grade": "V4",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 36,
+    "setter": "graph",
+    "grade": "V5",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 37,
+    "setter": "graph",
+    "grade": "V6",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 38,
+    "setter": "graph",
+    "grade": "V7",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 39,
+    "setter": "graph",
+    "grade": "V8",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 40,
+    "setter": "graph",
+    "grade": "V9",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 41,
+    "setter": "graph",
+    "grade": "V10",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 42,
+    "setter": "graph",
+    "grade": "V11",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 43,
+    "setter": "graph",
+    "grade": "V12",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 44,
+    "setter": "graph",
+    "grade": "V13",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 45,
+    "setter": "graph",
+    "grade": "V14",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 46,
+    "setter": "neural",
+    "grade": "V0",
+    "name": "Neural Setter"
+  },
+  {
+    "index": 47,
+    "setter": "neural",
+    "grade": "V1",
+    "name": "Neural Setter"
+  },
+  {
+    "index": 48,
+    "setter": "neural",
+    "grade": "V2",
+    "name": "Neural Setter"
+  },
+  {
+    "index": 49,
+    "setter": "neural",
+    "grade": "V3",
+    "name": "Neural Setter"
+  },
+  {
+    "index": 50,
+    "setter": "neural",
+    "grade": "V4",
+    "name": "Neural Setter"
+  },
+  {
+    "index": 51,
+    "setter": "neural",
+    "grade": "V5",
+    "name": "Neural Setter"
+  },
+  {
+    "index": 52,
+    "setter": "neural",
+    "grade": "V6",
+    "name": "Neural Setter"
+  },
+  {
+    "index": 53,
+    "setter": "neural",
+    "grade": "V7",
+    "name": "Neural Setter"
+  },
+  {
+    "index": 54,
+    "setter": "neural",
+    "grade": "V8",
+    "name": "Neural Setter"
+  },
+  {
+    "index": 55,
+    "setter": "neural",
+    "grade": "V9",
+    "name": "Neural Setter"
+  },
+  {
+    "index": 56,
+    "setter": "neural",
+    "grade": "V10",
+    "name": "Neural Setter"
+  },
+  {
+    "index": 57,
+    "setter": "neural",
+    "grade": "V11",
+    "name": "Neural Setter"
+  },
+  {
+    "index": 58,
+    "setter": "neural",
+    "grade": "V12",
+    "name": "Neural Setter"
+  },
+  {
+    "index": 59,
+    "setter": "neural",
+    "grade": "V13",
+    "name": "Neural Setter"
+  },
+  {
+    "index": 60,
+    "setter": "neural",
+    "grade": "V14",
+    "name": "Neural Setter"
+  },
+  {
+    "index": 61,
+    "setter": "random",
+    "grade": "V0",
+    "name": "Random Setter"
+  },
+  {
+    "index": 62,
+    "setter": "random",
+    "grade": "V1",
+    "name": "Random Setter"
+  },
+  {
+    "index": 63,
+    "setter": "random",
+    "grade": "V2",
+    "name": "Random Setter"
+  },
+  {
+    "index": 64,
+    "setter": "random",
+    "grade": "V3",
+    "name": "Random Setter"
+  },
+  {
+    "index": 65,
+    "setter": "random",
+    "grade": "V4",
+    "name": "Random Setter"
+  },
+  {
+    "index": 66,
+    "setter": "random",
+    "grade": "V5",
+    "name": "Random Setter"
+  },
+  {
+    "index": 67,
+    "setter": "random",
+    "grade": "V6",
+    "name": "Random Setter"
+  },
+  {
+    "index": 68,
+    "setter": "random",
+    "grade": "V7",
+    "name": "Random Setter"
+  },
+  {
+    "index": 69,
+    "setter": "random",
+    "grade": "V8",
+    "name": "Random Setter"
+  },
+  {
+    "index": 70,
+    "setter": "random",
+    "grade": "V9",
+    "name": "Random Setter"
+  },
+  {
+    "index": 71,
+    "setter": "random",
+    "grade": "V10",
+    "name": "Random Setter"
+  },
+  {
+    "index": 72,
+    "setter": "random",
+    "grade": "V11",
+    "name": "Random Setter"
+  },
+  {
+    "index": 73,
+    "setter": "random",
+    "grade": "V12",
+    "name": "Random Setter"
+  },
+  {
+    "index": 74,
+    "setter": "random",
+    "grade": "V13",
+    "name": "Random Setter"
+  },
+  {
+    "index": 75,
+    "setter": "random",
+    "grade": "V14",
+    "name": "Random Setter"
+  },
+  {
+    "index": 76,
+    "setter": "sequential",
+    "grade": "V0",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 77,
+    "setter": "sequential",
+    "grade": "V1",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 78,
+    "setter": "sequential",
+    "grade": "V2",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 79,
+    "setter": "sequential",
+    "grade": "V3",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 80,
+    "setter": "sequential",
+    "grade": "V4",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 81,
+    "setter": "sequential",
+    "grade": "V5",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 82,
+    "setter": "sequential",
+    "grade": "V6",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 83,
+    "setter": "sequential",
+    "grade": "V7",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 84,
+    "setter": "sequential",
+    "grade": "V8",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 85,
+    "setter": "sequential",
+    "grade": "V9",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 86,
+    "setter": "sequential",
+    "grade": "V10",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 87,
+    "setter": "sequential",
+    "grade": "V11",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 88,
+    "setter": "sequential",
+    "grade": "V12",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 89,
+    "setter": "sequential",
+    "grade": "V13",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 90,
+    "setter": "sequential",
+    "grade": "V14",
+    "name": "Sequential Setter"
+  },
+  {
+    "index": 91,
+    "setter": "graph",
+    "grade": "V0",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 92,
+    "setter": "graph",
+    "grade": "V1",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 93,
+    "setter": "graph",
+    "grade": "V2",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 94,
+    "setter": "graph",
+    "grade": "V3",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 95,
+    "setter": "graph",
+    "grade": "V4",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 96,
+    "setter": "graph",
+    "grade": "V5",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 97,
+    "setter": "graph",
+    "grade": "V6",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 98,
+    "setter": "graph",
+    "grade": "V7",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 99,
+    "setter": "graph",
+    "grade": "V8",
+    "name": "Graph Setter"
+  },
+  {
+    "index": 100,
+    "setter": "graph",
+    "grade": "V9",
+    "name": "Graph Setter"
+  }
+]

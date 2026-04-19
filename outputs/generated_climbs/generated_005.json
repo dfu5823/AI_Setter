@@ -1,0 +1,703 @@
+{
+  "name": "Random Setter",
+  "grade": "V5",
+  "angle": "50",
+  "matching_allowed": true,
+  "holds": {
+    "Start": [
+      [
+        1,
+        5
+      ],
+      [
+        9,
+        1
+      ]
+    ],
+    "Any": [
+      [
+        10,
+        12
+      ],
+      [
+        6,
+        16
+      ],
+      [
+        6,
+        18
+      ],
+      [
+        8,
+        22
+      ],
+      [
+        4,
+        26
+      ]
+    ],
+    "Finish": [
+      [
+        6,
+        34
+      ],
+      [
+        11,
+        31
+      ]
+    ],
+    "Feet": [
+      [
+        16,
+        12
+      ],
+      [
+        6,
+        14
+      ],
+      [
+        1,
+        17
+      ],
+      [
+        23,
+        19
+      ],
+      [
+        7,
+        23
+      ],
+      [
+        7,
+        27
+      ]
+    ]
+  },
+  "sequence": [
+    {
+      "x": 1,
+      "y": 5,
+      "type": "Start",
+      "hand": "left",
+      "move": 0,
+      "label": "0L",
+      "left": [
+        1,
+        5
+      ],
+      "right": [
+        9,
+        1
+      ],
+      "node": {
+        "left": [
+          1,
+          5
+        ],
+        "right": [
+          9,
+          1
+        ]
+      },
+      "event": "start",
+      "crossed": false,
+      "interhand_distance": 8.94427190999916
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "type": "Start",
+      "hand": "right",
+      "move": 0,
+      "label": "0R",
+      "left": [
+        1,
+        5
+      ],
+      "right": [
+        9,
+        1
+      ],
+      "node": {
+        "left": [
+          1,
+          5
+        ],
+        "right": [
+          9,
+          1
+        ]
+      },
+      "event": "start",
+      "crossed": false,
+      "interhand_distance": 8.94427190999916
+    },
+    {
+      "x": 10,
+      "y": 12,
+      "type": "Any",
+      "hand": "right",
+      "move": 1,
+      "label": "1R",
+      "left": [
+        1,
+        5
+      ],
+      "right": [
+        10,
+        12
+      ],
+      "node": {
+        "left": [
+          1,
+          5
+        ],
+        "right": [
+          10,
+          12
+        ]
+      },
+      "event": "hand_move",
+      "crossed": false,
+      "interhand_distance": 11.40175425099138
+    },
+    {
+      "x": 6,
+      "y": 16,
+      "type": "Any",
+      "hand": "left",
+      "move": 2,
+      "label": "2L",
+      "left": [
+        6,
+        16
+      ],
+      "right": [
+        10,
+        12
+      ],
+      "node": {
+        "left": [
+          6,
+          16
+        ],
+        "right": [
+          10,
+          12
+        ]
+      },
+      "event": "hand_move",
+      "crossed": false,
+      "interhand_distance": 5.656854249492381
+    },
+    {
+      "x": 6,
+      "y": 18,
+      "type": "Any",
+      "hand": "left",
+      "move": 3,
+      "label": "3L",
+      "left": [
+        6,
+        18
+      ],
+      "right": [
+        10,
+        12
+      ],
+      "node": {
+        "left": [
+          6,
+          18
+        ],
+        "right": [
+          10,
+          12
+        ]
+      },
+      "event": "bump",
+      "crossed": false,
+      "interhand_distance": 7.211102550927978
+    },
+    {
+      "x": 8,
+      "y": 22,
+      "type": "Any",
+      "hand": "right",
+      "move": 4,
+      "label": "4R",
+      "left": [
+        6,
+        18
+      ],
+      "right": [
+        8,
+        22
+      ],
+      "node": {
+        "left": [
+          6,
+          18
+        ],
+        "right": [
+          8,
+          22
+        ]
+      },
+      "event": "hand_move",
+      "crossed": false,
+      "interhand_distance": 4.47213595499958
+    },
+    {
+      "x": 4,
+      "y": 26,
+      "type": "Any",
+      "hand": "left",
+      "move": 5,
+      "label": "5L",
+      "left": [
+        4,
+        26
+      ],
+      "right": [
+        8,
+        22
+      ],
+      "node": {
+        "left": [
+          4,
+          26
+        ],
+        "right": [
+          8,
+          22
+        ]
+      },
+      "event": "hand_move",
+      "crossed": false,
+      "interhand_distance": 5.656854249492381
+    },
+    {
+      "x": 11,
+      "y": 31,
+      "type": "Finish",
+      "hand": "right",
+      "move": 6,
+      "label": "6R",
+      "left": [
+        4,
+        26
+      ],
+      "right": [
+        11,
+        31
+      ],
+      "node": {
+        "left": [
+          4,
+          26
+        ],
+        "right": [
+          11,
+          31
+        ]
+      },
+      "event": "hand_move",
+      "crossed": false,
+      "interhand_distance": 8.602325267042627
+    },
+    {
+      "x": 6,
+      "y": 34,
+      "type": "Finish",
+      "hand": "left",
+      "move": 7,
+      "label": "7L",
+      "left": [
+        6,
+        34
+      ],
+      "right": [
+        11,
+        31
+      ],
+      "node": {
+        "left": [
+          6,
+          34
+        ],
+        "right": [
+          11,
+          31
+        ]
+      },
+      "event": "hand_move",
+      "crossed": false,
+      "interhand_distance": 5.830951894845301
+    }
+  ],
+  "hand_sequence": [
+    {
+      "x": 1,
+      "y": 5,
+      "type": "Start",
+      "hand": "left",
+      "move": 0,
+      "label": "0L",
+      "left": [
+        1,
+        5
+      ],
+      "right": [
+        9,
+        1
+      ],
+      "node": {
+        "left": [
+          1,
+          5
+        ],
+        "right": [
+          9,
+          1
+        ]
+      },
+      "event": "start",
+      "crossed": false,
+      "interhand_distance": 8.94427190999916
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "type": "Start",
+      "hand": "right",
+      "move": 0,
+      "label": "0R",
+      "left": [
+        1,
+        5
+      ],
+      "right": [
+        9,
+        1
+      ],
+      "node": {
+        "left": [
+          1,
+          5
+        ],
+        "right": [
+          9,
+          1
+        ]
+      },
+      "event": "start",
+      "crossed": false,
+      "interhand_distance": 8.94427190999916
+    },
+    {
+      "x": 10,
+      "y": 12,
+      "type": "Any",
+      "hand": "right",
+      "move": 1,
+      "label": "1R",
+      "left": [
+        1,
+        5
+      ],
+      "right": [
+        10,
+        12
+      ],
+      "node": {
+        "left": [
+          1,
+          5
+        ],
+        "right": [
+          10,
+          12
+        ]
+      },
+      "event": "hand_move",
+      "crossed": false,
+      "interhand_distance": 11.40175425099138
+    },
+    {
+      "x": 6,
+      "y": 16,
+      "type": "Any",
+      "hand": "left",
+      "move": 2,
+      "label": "2L",
+      "left": [
+        6,
+        16
+      ],
+      "right": [
+        10,
+        12
+      ],
+      "node": {
+        "left": [
+          6,
+          16
+        ],
+        "right": [
+          10,
+          12
+        ]
+      },
+      "event": "hand_move",
+      "crossed": false,
+      "interhand_distance": 5.656854249492381
+    },
+    {
+      "x": 6,
+      "y": 18,
+      "type": "Any",
+      "hand": "left",
+      "move": 3,
+      "label": "3L",
+      "left": [
+        6,
+        18
+      ],
+      "right": [
+        10,
+        12
+      ],
+      "node": {
+        "left": [
+          6,
+          18
+        ],
+        "right": [
+          10,
+          12
+        ]
+      },
+      "event": "bump",
+      "crossed": false,
+      "interhand_distance": 7.211102550927978
+    },
+    {
+      "x": 8,
+      "y": 22,
+      "type": "Any",
+      "hand": "right",
+      "move": 4,
+      "label": "4R",
+      "left": [
+        6,
+        18
+      ],
+      "right": [
+        8,
+        22
+      ],
+      "node": {
+        "left": [
+          6,
+          18
+        ],
+        "right": [
+          8,
+          22
+        ]
+      },
+      "event": "hand_move",
+      "crossed": false,
+      "interhand_distance": 4.47213595499958
+    },
+    {
+      "x": 4,
+      "y": 26,
+      "type": "Any",
+      "hand": "left",
+      "move": 5,
+      "label": "5L",
+      "left": [
+        4,
+        26
+      ],
+      "right": [
+        8,
+        22
+      ],
+      "node": {
+        "left": [
+          4,
+          26
+        ],
+        "right": [
+          8,
+          22
+        ]
+      },
+      "event": "hand_move",
+      "crossed": false,
+      "interhand_distance": 5.656854249492381
+    },
+    {
+      "x": 11,
+      "y": 31,
+      "type": "Finish",
+      "hand": "right",
+      "move": 6,
+      "label": "6R",
+      "left": [
+        4,
+        26
+      ],
+      "right": [
+        11,
+        31
+      ],
+      "node": {
+        "left": [
+          4,
+          26
+        ],
+        "right": [
+          11,
+          31
+        ]
+      },
+      "event": "hand_move",
+      "crossed": false,
+      "interhand_distance": 8.602325267042627
+    },
+    {
+      "x": 6,
+      "y": 34,
+      "type": "Finish",
+      "hand": "left",
+      "move": 7,
+      "label": "7L",
+      "left": [
+        6,
+        34
+      ],
+      "right": [
+        11,
+        31
+      ],
+      "node": {
+        "left": [
+          6,
+          34
+        ],
+        "right": [
+          11,
+          31
+        ]
+      },
+      "event": "hand_move",
+      "crossed": false,
+      "interhand_distance": 5.830951894845301
+    }
+  ],
+  "foot_sequence": [
+    {
+      "move": 0,
+      "left": null,
+      "right": null
+    },
+    {
+      "move": 0,
+      "left": null,
+      "right": null
+    },
+    {
+      "move": 1,
+      "left": null,
+      "right": null
+    },
+    {
+      "move": 2,
+      "left": [
+        1,
+        5
+      ],
+      "right": [
+        9,
+        1
+      ]
+    },
+    {
+      "move": 3,
+      "left": [
+        1,
+        5
+      ],
+      "right": [
+        9,
+        1
+      ]
+    },
+    {
+      "move": 4,
+      "left": [
+        1,
+        5
+      ],
+      "right": [
+        9,
+        1
+      ]
+    },
+    {
+      "move": 5,
+      "left": [
+        1,
+        5
+      ],
+      "right": [
+        9,
+        1
+      ]
+    },
+    {
+      "move": 6,
+      "left": [
+        1,
+        5
+      ],
+      "right": [
+        10,
+        12
+      ]
+    },
+    {
+      "move": 7,
+      "left": [
+        8,
+        22
+      ],
+      "right": [
+        10,
+        12
+      ]
+    }
+  ],
+  "sequence_metrics": {
+    "moves": 9,
+    "crosses": 0,
+    "dynos": 0,
+    "bumps": 1,
+    "average_move_distance": 6.526094317882336,
+    "average_interhand_distance": 7.4133913597544385,
+    "max_interhand_distance": 11.40175425099138,
+    "foot_moves": 4
+  },
+  "setter": "random",
+  "selection_notes": [
+    "Random setter: sampled valid physical holds with start in low zone.",
+    "Each hand move uses a clipped normal reach draw centered at 9 hold units and capped to [1, 18].",
+    "Feet are selected from valid physical holds within 18 hold units of the hand path.",
+    "Finish is selected from high or upward reachable candidates."
+  ],
+  "selection_explanation": "Model description: random setter samples only detected physical Kilter holds, constrains starts, hand moves, finish candidates, and feet by Euclidean hold-unit reach windows where next-hand reach is drawn from a normal distribution centered at 9 and clipped to [1, 18], and stores the result as coordinates.\nHold-By-Hold Explanation:\n1. Start (1, 5): sampled from low-zone valid-hold candidates.\n2. Start (9, 1): sampled from valid holds with clipped-normal target reach centered at 9 and cap 18 from (1, 5); actual_distance=8.94.\n3. Any (10, 12): sampled from valid holds with clipped-normal target reach centered at 9 and cap 18 from (9, 1); actual_distance=11.05.\n4. Any (6, 16): sampled from valid holds with clipped-normal target reach centered at 9 and cap 18 from (10, 12); actual_distance=5.66.\n5. Any (6, 18): sampled from valid holds with clipped-normal target reach centered at 9 and cap 18 from (6, 16); actual_distance=2.00.\n6. Any (8, 22): sampled from valid holds with clipped-normal target reach centered at 9 and cap 18 from (6, 18); actual_distance=4.47.\n7. Any (4, 26): sampled from valid holds with clipped-normal target reach centered at 9 and cap 18 from (8, 22); actual_distance=5.66.\n8. Finish (11, 31): sampled from valid holds with clipped-normal target reach centered at 9 and cap 18 from (4, 26); actual_distance=8.60.\n9. Finish (6, 34): sampled from valid holds with clipped-normal target reach centered at 9 and cap 18 from (11, 31); actual_distance=5.83.\nFoot 1. (16, 12): sampled from valid foot candidates; nearest_hand_path_distance=6.00, cap=18.00.\nFoot 2. (6, 14): sampled from valid foot candidates; nearest_hand_path_distance=2.00, cap=18.00.\nFoot 3. (1, 17): sampled from valid foot candidates; nearest_hand_path_distance=5.10, cap=18.00.\nFoot 4. (23, 19): sampled from valid foot candidates; nearest_hand_path_distance=14.76, cap=18.00.\nFoot 5. (7, 23): sampled from valid foot candidates; nearest_hand_path_distance=1.41, cap=18.00.\nFoot 6. (7, 27): sampled from valid foot candidates; nearest_hand_path_distance=3.16, cap=18.00."
+}
