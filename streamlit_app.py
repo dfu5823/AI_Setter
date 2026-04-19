@@ -3,10 +3,12 @@
 from __future__ import annotations
 
 import json
+import base64
 import tempfile
 from pathlib import Path
 
 import streamlit as st
+import streamlit.components.v1 as components
 
 from ai_setters.climb_core import (
     ClimbValidationError,
@@ -16,7 +18,7 @@ from ai_setters.climb_core import (
     validate_climb,
 )
 from ai_setters.generators import EmpiricalSequentialSetter, GraphSetter, NeuralSetter, RandomSetter, generate_climb
-from ai_setters.rendering import render_climb_png
+from ai_setters.rendering import board_point, render_climb_png
 from webapp.server import load_saved_climbs, save_climb
 
 
@@ -134,30 +136,168 @@ def fallback_training_records() -> list[dict]:
 def generate_climb_for_streamlit(setter: str, grade: str, angle: str, seed: int, options: dict) -> dict:
     try:
         return generate_climb(setter, grade=grade, angle=angle, seed=seed, options=options)
-    except Exception:
+    except Exception as primary_exc:
         records = fallback_training_records()
         setter_key = setter.lower()
-        if setter_key == "random":
-            model = RandomSetter(records)
-        elif setter_key == "sequential":
-            model = EmpiricalSequentialSetter(records)
-        elif setter_key == "graph":
-            model = GraphSetter(records)
-        elif setter_key == "neural":
-            model = NeuralSetter(records)
-        else:
-            raise ValueError(f"Unknown setter: {setter}")
-        climb = validate_climb(model.create(grade=grade, angle=angle, seed=seed, options=options))
-        climb["setter"] = setter
-        return hydrate_sequence(climb)
+        try:
+            if setter_key == "random":
+                model = RandomSetter(records)
+            elif setter_key == "sequential":
+                model = EmpiricalSequentialSetter(records)
+            elif setter_key == "graph":
+                model = GraphSetter(records)
+            elif setter_key == "neural":
+                model = NeuralSetter(records)
+            else:
+                raise ValueError(f"Unknown setter: {setter}")
+            climb = validate_climb(model.create(grade=grade, angle=angle, seed=seed, options=options))
+            climb["setter"] = setter
+            return hydrate_sequence(climb)
+        except Exception as fallback_exc:
+            raise RuntimeError(f"{setter} setter failed. Primary: {primary_exc}. Fallback: {fallback_exc}") from fallback_exc
 
 
-def render_climb(climb: dict, annotate_sequence: bool = True) -> Path:
+def render_climb(climb: dict, annotate_sequence: bool = True, show_title: bool = True) -> bytes:
     climb = hydrate_sequence(climb)
-    title = climb_label(climb)
-    output_path = Path(tempfile.gettempdir()) / "ai_setter_streamlit_climb.png"
-    render_climb_png(climb, output_path, title=title, annotate_sequence=annotate_sequence, size=(650, 802))
-    return output_path
+    title = climb_label(climb) if show_title else None
+    with tempfile.TemporaryDirectory() as temp_dir:
+        output_path = Path(temp_dir) / "climb.png"
+        render_climb_png(climb, output_path, title=title, annotate_sequence=annotate_sequence, size=(650, 802))
+        return output_path.read_bytes()
+
+
+def move_points(climb: dict) -> list[dict]:
+    points = []
+    for move in climb.get("hand_sequence") or climb.get("sequence") or []:
+        x = int(move.get("x", 1))
+        y = int(move.get("y", 1))
+        px, py = board_point(x, y, size=(650, 802))
+        points.append(
+            {
+                "x": x,
+                "y": y,
+                "px": px,
+                "py": py,
+                "hand": move.get("hand") or "left",
+                "label": move.get("label") or str(move.get("move") or ""),
+            }
+        )
+    return points
+
+
+def foot_points(climb: dict) -> list[dict]:
+    points = []
+    for foot in climb.get("foot_sequence") or []:
+        x = int(foot.get("x", 1))
+        y = int(foot.get("y", 1))
+        px, py = board_point(x, y, size=(650, 802))
+        points.append({"x": x, "y": y, "px": px, "py": py, "foot": foot.get("foot") or "left"})
+    return points
+
+
+def beta_animation_html(climb: dict) -> str:
+    board_png = base64.b64encode(render_climb(climb, annotate_sequence=False, show_title=False)).decode("ascii")
+    payload = json.dumps({"hands": move_points(climb), "feet": foot_points(climb)})
+    return f"""
+<div class="beta-wrap">
+  <canvas id="betaCanvas" width="650" height="802"></canvas>
+</div>
+<script>
+const data = {payload};
+const canvas = document.getElementById("betaCanvas");
+const ctx = canvas.getContext("2d");
+const board = new Image();
+board.src = "data:image/png;base64,{board_png}";
+const hands = data.hands.length ? data.hands : [{{px: 325, py: 760, hand: "left"}}];
+const feet = data.feet.length ? data.feet : [];
+const colors = {{ left: "#ffffff", right: "#111111" }};
+
+function lerp(a, b, t) {{ return a + (b - a) * t; }}
+function handAt(index, side) {{
+  const prior = hands.slice(0, index + 1).filter((move) => move.hand === side);
+  if (prior.length) return prior[prior.length - 1];
+  return hands[0];
+}}
+function footAt(index, side) {{
+  const available = feet.filter((move) => move.foot === side);
+  if (!available.length) return {{ px: handAt(index, side).px, py: Math.min(792, handAt(index, side).py + 110) }};
+  return available[Math.min(index, available.length - 1)];
+}}
+function drawLimb(a, b, width, color) {{
+  ctx.strokeStyle = color;
+  ctx.lineWidth = width;
+  ctx.lineCap = "round";
+  ctx.beginPath();
+  ctx.moveTo(a.x, a.y);
+  ctx.lineTo(b.x, b.y);
+  ctx.stroke();
+}}
+function drawJoint(point, radius, fill, stroke) {{
+  ctx.fillStyle = fill;
+  ctx.strokeStyle = stroke || "#111";
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.arc(point.x, point.y, radius, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.stroke();
+}}
+function poseAt(time) {{
+  const duration = 1150;
+  const step = Math.floor(time / duration) % Math.max(1, hands.length - 1);
+  const local = (time % duration) / duration;
+  const eased = local < 0.5 ? 2 * local * local : 1 - Math.pow(-2 * local + 2, 2) / 2;
+  const from = hands[step];
+  const to = hands[Math.min(step + 1, hands.length - 1)];
+  const moving = to.hand || "right";
+  const leftHandBase = handAt(step, "left");
+  const rightHandBase = handAt(step, "right");
+  const leftHand = moving === "left" ? {{ px: lerp(from.px, to.px, eased), py: lerp(from.py, to.py, eased) }} : leftHandBase;
+  const rightHand = moving === "right" ? {{ px: lerp(from.px, to.px, eased), py: lerp(from.py, to.py, eased) }} : rightHandBase;
+  const leftFoot = footAt(step, "left");
+  const rightFoot = footAt(step, "right");
+  const shoulder = {{ x: (leftHand.px + rightHand.px) / 2, y: (leftHand.py + rightHand.py) / 2 + 46 }};
+  const hip = {{ x: (leftFoot.px + rightFoot.px) / 2, y: (leftFoot.py + rightFoot.py) / 2 - 58 }};
+  const torso = {{ x: (shoulder.x + hip.x) / 2, y: (shoulder.y + hip.y) / 2 }};
+  return {{
+    leftHand: {{ x: leftHand.px, y: leftHand.py }},
+    rightHand: {{ x: rightHand.px, y: rightHand.py }},
+    leftFoot: {{ x: leftFoot.px, y: leftFoot.py }},
+    rightFoot: {{ x: rightFoot.px, y: rightFoot.py }},
+    shoulder, hip, torso, moving
+  }};
+}}
+function draw(time) {{
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  if (board.complete) ctx.drawImage(board, 0, 0, canvas.width, canvas.height);
+  const pose = poseAt(time);
+  drawLimb(pose.shoulder, pose.leftHand, 7, "#f7f7f7");
+  drawLimb(pose.shoulder, pose.rightHand, 7, "#222");
+  drawLimb(pose.hip, pose.leftFoot, 7, "#f7f7f7");
+  drawLimb(pose.hip, pose.rightFoot, 7, "#222");
+  drawLimb(pose.shoulder, pose.hip, 10, "#43a7d8");
+  drawJoint({{ x: pose.shoulder.x, y: pose.shoulder.y - 28 }}, 18, "#f4c7a1", "#111");
+  drawJoint(pose.leftHand, 8, "#fff", "#111");
+  drawJoint(pose.rightHand, 8, "#111", "#fff");
+  drawJoint(pose.leftFoot, 7, "#fff", "#111");
+  drawJoint(pose.rightFoot, 7, "#111", "#fff");
+  requestAnimationFrame(draw);
+}}
+board.onload = () => requestAnimationFrame(draw);
+requestAnimationFrame(draw);
+</script>
+<style>
+.beta-wrap {{
+  width: min(650px, 100%);
+  margin: 0 auto;
+}}
+#betaCanvas {{
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #111;
+}}
+</style>
+"""
 
 
 def parse_points(text: str) -> list[list[int]]:
@@ -213,7 +353,7 @@ with tab_find:
         selected = st.selectbox("Climb", climbs, format_func=climb_label)
         st.session_state.current_climb = hydrate_sequence(selected)
         left, right = st.columns([0.58, 0.42], vertical_alignment="top")
-        left.image(str(render_climb(st.session_state.current_climb)))
+        left.image(render_climb(st.session_state.current_climb), output_format="PNG")
         with right:
             climb = st.session_state.current_climb
             st.subheader(climb.get("name") or "Untitled")
@@ -250,7 +390,7 @@ with tab_generate:
             st.session_state.current_climb = hydrate_sequence(generated)
 
     if current_climb():
-        st.image(str(render_climb(current_climb())))
+        st.image(render_climb(current_climb()), output_format="PNG")
         if current_climb().get("selection_notes"):
             st.info(current_climb()["selection_notes"])
 
@@ -287,7 +427,7 @@ with tab_set:
             st.session_state.current_climb = hydrate_sequence(saved)
             st.success("Climb saved for this deployment session.")
     if current_climb():
-        st.image(str(render_climb(current_climb())))
+        st.image(render_climb(current_climb()), output_format="PNG")
 
 with tab_beta:
     climb = current_climb()
@@ -296,7 +436,8 @@ with tab_beta:
     else:
         climb = hydrate_sequence(climb)
         st.subheader(climb_label(climb))
-        st.image(str(render_climb(climb, annotate_sequence=True)))
+        components.html(beta_animation_html(climb), height=840)
+        st.image(render_climb(climb, annotate_sequence=True), output_format="PNG")
         metrics = climb.get("sequence_metrics") or {}
         if metrics:
             st.write("Metrics")
